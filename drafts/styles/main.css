@@ -1,0 +1,12 @@
+/* Main Stylesystem */
+:root {
+    --primary-color: #333;
+    --background-color: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
