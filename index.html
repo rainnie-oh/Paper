@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper — Product Design Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Work Sans', 'sans-serif'],
+            },
+            colors: {
+              'paper-bg': '#E8E7E3', // Warm gray from reference
+              'paper-dark': '#080808', // Deep black
+              'paper-text': '#1C1C1C', // Soft black
+              'paper-sub': '#5E5E5E', // Deep gray
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Hide scrollbar for clean aesthetic */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.26.1",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "html-to-image": "https://esm.sh/html-to-image@1.11.11"
+  }
+}
+</script>
+</head>
+  <body class="bg-paper-bg text-paper-text antialiased selection:bg-black selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
