@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 export const RadialBurst: React.FC<{ className?: string; color?: string }> = ({ className = '', color = 'stroke-white' }) => {
   return (
     <div className={`relative w-full aspect-square flex items-center justify-center overflow-hidden ${className}`}>
-      <motion.svg 
-        viewBox="0 0 400 400" 
+      <motion.svg
+        viewBox="0 0 400 400"
         className={`w-full h-full opacity-60 ${color}`}
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
@@ -28,17 +28,17 @@ export const RadialBurst: React.FC<{ className?: string; color?: string }> = ({ 
   );
 };
 
-export const PlaceholderImage: React.FC<{ 
-  label: string; 
-  aspect?: string; 
+export const PlaceholderImage: React.FC<{
+  label: string;
+  aspect?: string;
   dark?: boolean;
 }> = ({ label, aspect = 'aspect-video', dark = false }) => (
   <div className={`w-full ${aspect} relative group overflow-hidden border ${dark ? 'border-white/20 bg-white/5' : 'border-black/10 bg-black/5'}`}>
     {/* Diagonal Lines Pattern */}
-    <div className="absolute inset-0 opacity-[0.05]" 
-         style={{ backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, ${dark ? '#FFF' : '#000'} 10px, ${dark ? '#FFF' : '#000'} 11px)` }} 
+    <div className="absolute inset-0 opacity-[0.05]"
+      style={{ backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, ${dark ? '#FFF' : '#000'} 10px, ${dark ? '#FFF' : '#000'} 11px)` }}
     />
-    
+
     <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
       <span className={`text-xs uppercase tracking-widest mb-2 ${dark ? 'text-white/50' : 'text-black/50'}`}>
         Figure
@@ -65,15 +65,15 @@ export const LaptopMockup: React.FC<{ children: React.ReactNode }> = ({ children
       </div>
     </div>
     <div className="bg-[#121212] h-4 md:h-6 rounded-b-lg w-full relative">
-       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 md:w-24 h-1 md:h-1.5 bg-gray-700 rounded-b-md"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 md:w-24 h-1 md:h-1.5 bg-gray-700 rounded-b-md"></div>
     </div>
   </div>
 );
 
 export const WorkflowDiagram: React.FC = () => (
   <div className="w-full aspect-video relative bg-[#F9F9F7] rounded-sm border border-black/5 overflow-hidden text-paper-text font-sans select-none">
-    <div className="absolute inset-0 opacity-30" 
-         style={{ backgroundImage: 'radial-gradient(#000000 0.5px, transparent 0.5px)', backgroundSize: '20px 20px' }}>
+    <div className="absolute inset-0 opacity-30"
+      style={{ backgroundImage: 'radial-gradient(#000000 0.5px, transparent 0.5px)', backgroundSize: '20px 20px' }}>
     </div>
     <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 800 450">
       <defs>
@@ -100,28 +100,28 @@ export const WorkflowDiagram: React.FC = () => (
       <span className="text-[10px] mt-2 uppercase tracking-widest text-paper-sub">Eng.</span>
     </div>
     <div className="absolute top-[18%] left-[25%] z-10">
-       <div className="w-10 h-10 bg-white rounded flex items-center justify-center border border-orange-200 shadow-sm text-xs font-bold text-orange-600">Mat</div>
+      <div className="w-10 h-10 bg-white rounded flex items-center justify-center border border-orange-200 shadow-sm text-xs font-bold text-orange-600">Mat</div>
     </div>
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-       <div className="bg-white border border-black px-4 py-3 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] max-w-[180px] text-center">
-          <p className="text-xs font-medium leading-tight text-black">"Wait, is this the result from v2 or v3?"</p>
-       </div>
-       <div className="w-3 h-3 bg-white border-b border-r border-black absolute -bottom-1.5 left-1/2 -translate-x-1/2 rotate-45"></div>
+      <div className="bg-white border border-black px-4 py-3 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] max-w-[180px] text-center">
+        <p className="text-xs font-medium leading-tight text-black">"Wait, is this the result from v2 or v3?"</p>
+      </div>
+      <div className="w-3 h-3 bg-white border-b border-r border-black absolute -bottom-1.5 left-1/2 -translate-x-1/2 rotate-45"></div>
     </div>
   </div>
 );
 
 export const WorkshopWhiteboard: React.FC = () => (
   <div className="w-full relative bg-white border border-black/5 overflow-hidden">
-    <img 
-      src="workshop.jpg" 
+    <img
+      src="workshop.jpg"
       crossOrigin="anonymous"
-      alt="Workshop Whiteboard showing system mapping with physical cards" 
+      alt="Workshop Whiteboard showing system mapping with physical cards"
       className="w-full h-auto block object-contain"
       onError={(e) => {
         const target = e.target as HTMLImageElement;
         if (!target.src.includes('workshop.jpg')) {
-           target.src = 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&q=80&w=2069';
+          target.src = 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&q=80&w=2069';
         }
       }}
       loading="lazy"
@@ -133,7 +133,7 @@ export const SystemArchDiagram: React.FC = () => {
   const CARD_W = 160;
   const CARD_H = 80;
   const CENTER_X = 600;
-  
+
   return (
     <div className="w-full bg-paper-dark border border-white/10 overflow-hidden shadow-sm aspect-[1.5/1]">
       <svg viewBox="0 0 1200 800" className="w-full h-full font-sans fill-white select-none">
@@ -142,7 +142,7 @@ export const SystemArchDiagram: React.FC = () => {
             <polygon points="0 0, 10 3.5, 0 7" fill="white" />
           </marker>
           <pattern id="grid-white" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" opacity="0.05"/>
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" opacity="0.05" />
           </pattern>
         </defs>
 
@@ -150,9 +150,9 @@ export const SystemArchDiagram: React.FC = () => {
 
         {/* --- TIER LABELS (STAY AT ORIGINAL POS) --- */}
         <g className="opacity-40">
-           <text x="50" y="140" className="text-[10px] uppercase tracking-widest fill-white font-medium">01. Source Modules</text>
-           <text x="50" y="420" className="text-[10px] uppercase tracking-widest fill-white font-medium">02. Data Processing</text>
-           <text x="50" y="700" className="text-[10px] uppercase tracking-widest fill-white font-medium">03. Output Modules</text>
+          <text x="50" y="140" className="text-[10px] uppercase tracking-widest fill-white font-medium">01. Source Modules</text>
+          <text x="50" y="420" className="text-[10px] uppercase tracking-widest fill-white font-medium">02. Data Processing</text>
+          <text x="50" y="700" className="text-[10px] uppercase tracking-widest fill-white font-medium">03. Output Modules</text>
         </g>
 
         {/* --- CONNECTIONS (ORTHOGONAL & CENTERED) --- */}
@@ -183,29 +183,29 @@ export const SystemArchDiagram: React.FC = () => {
         </g>
 
         {/* --- CARDS (CENTERED POSITIONS) --- */}
-        
+
         {/* Tier 1: Sources */}
         <g transform={`translate(${CENTER_X - 300}, 100)`}>
           <rect width={CARD_W} height={CARD_H} fill="white" fillOpacity="0.03" stroke="white" strokeWidth="2" />
-          <rect x="5" y="5" width={CARD_W-10} height={CARD_H-10} fill="white" fillOpacity="0.05" />
-          <text x={CARD_W/2} y="35" textAnchor="middle" className="text-xl font-bold fill-white">{"</>"}</text>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Modelica</text>
+          <rect x="5" y="5" width={CARD_W - 10} height={CARD_H - 10} fill="white" fillOpacity="0.05" />
+          <text x={CARD_W / 2} y="35" textAnchor="middle" className="text-xl font-bold fill-white">{"</>"}</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Modelica</text>
           <circle cx="0" cy="0" r="2" fill="white" className="animate-pulse" />
         </g>
 
         <g transform={`translate(${CENTER_X - 40}, 100)`}>
           <rect width={CARD_W} height={CARD_H} fill="white" fillOpacity="0.03" stroke="white" strokeWidth="2" />
-          <rect x="5" y="5" width={CARD_W-10} height={CARD_H-10} fill="white" fillOpacity="0.05" />
-          <text x={CARD_W/2} y="35" textAnchor="middle" className="text-xl font-bold fill-white">{"</>"}</text>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Python</text>
+          <rect x="5" y="5" width={CARD_W - 10} height={CARD_H - 10} fill="white" fillOpacity="0.05" />
+          <text x={CARD_W / 2} y="35" textAnchor="middle" className="text-xl font-bold fill-white">{"</>"}</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Python</text>
           <circle cx="0" cy="0" r="2" fill="white" className="animate-pulse" />
         </g>
 
         <g transform={`translate(${CENTER_X + 220}, 100)`}>
           <rect width={CARD_W} height={CARD_H} fill="none" stroke="white" strokeWidth="1" strokeOpacity="0.2" />
-          <text x={CARD_W/2} y="35" textAnchor="middle" className="text-xl font-bold fill-white/40">T</text>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white/40">Text</text>
-          <text x={CARD_W/2} y="100" textAnchor="middle" className="text-[9px] fill-white/20 uppercase tracking-[0.2em]">Isolated: Doc only</text>
+          <text x={CARD_W / 2} y="35" textAnchor="middle" className="text-xl font-bold fill-white/40">T</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white/40">Text</text>
+          <text x={CARD_W / 2} y="100" textAnchor="middle" className="text-[9px] fill-white/20 uppercase tracking-[0.2em]">Isolated: Doc only</text>
         </g>
 
         {/* Tier 2: Processing */}
@@ -215,8 +215,8 @@ export const SystemArchDiagram: React.FC = () => {
             <rect width="20" height="20" fill="none" stroke="white" strokeWidth="1" />
             <path d="M 0 10 L 20 10 M 10 0 L 10 20" stroke="white" strokeWidth="1" />
           </g>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Table</text>
-          <text x={CARD_W/2} y="105" textAnchor="middle" className="text-[9px] fill-white/40 uppercase tracking-[0.2em]">Editor + Result States</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Table</text>
+          <text x={CARD_W / 2} y="105" textAnchor="middle" className="text-[9px] fill-white/40 uppercase tracking-[0.2em]">Editor + Result States</text>
         </g>
 
         {/* Tier 3: Outputs */}
@@ -227,7 +227,7 @@ export const SystemArchDiagram: React.FC = () => {
             <rect x="6" y="4" width="4" height="16" fill="white" />
             <rect x="12" y="8" width="4" height="12" fill="white" />
           </g>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Plot</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Plot</text>
         </g>
 
         <g transform={`translate(${CENTER_X + 100}, 660)`}>
@@ -236,8 +236,8 @@ export const SystemArchDiagram: React.FC = () => {
             <path d="M 0 5 L 10 0 L 20 5 L 20 15 L 10 20 L 0 15 Z" fill="none" stroke="white" strokeWidth="1.5" />
             <path d="M 0 5 L 10 10 L 20 5 M 10 10 L 10 20" stroke="white" strokeWidth="1" />
           </g>
-          <text x={CARD_W/2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Visualization</text>
-          <text x={CARD_W/2} y="105" textAnchor="middle" className="text-[9px] fill-white/40 uppercase tracking-[0.2em]">Requires 3D Model Data</text>
+          <text x={CARD_W / 2} y="60" textAnchor="middle" className="text-[13px] font-medium tracking-wide fill-white">Visualization</text>
+          <text x={CARD_W / 2} y="105" textAnchor="middle" className="text-[9px] fill-white/40 uppercase tracking-[0.2em]">Requires 3D Model Data</text>
         </g>
       </svg>
     </div>
@@ -259,4 +259,161 @@ export const Timeline: React.FC = () => {
       </div>
     </div>
   );
-}
+};
+
+export const AiPrinciplesDiagram: React.FC = () => {
+  return (
+    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* 1. Context Aware */}
+      <div className="bg-white p-6 border border-black/5 flex flex-col items-center text-center">
+        <div className="w-16 h-16 mb-4 relative flex items-center justify-center">
+          <svg viewBox="0 0 64 64" className="w-full h-full stroke-black fill-none stroke-2">
+            <rect x="12" y="12" width="40" height="40" rx="2" />
+            <path d="M 32 12 L 32 52" strokeDasharray="4 4" opacity="0.2" />
+            <path d="M 12 32 L 52 32" strokeDasharray="4 4" opacity="0.2" />
+            <circle cx="32" cy="32" r="8" className="fill-black/5" />
+            <path d="M 32 24 L 32 18" />
+            <path d="M 32 46 L 32 40" />
+            <path d="M 40 32 L 46 32" />
+            <path d="M 18 32 L 24 32" />
+          </svg>
+        </div>
+        <h4 className="font-medium mb-2">Context-aware</h4>
+        <p className="text-xs text-paper-sub">Understanding module types & relationships</p>
+      </div>
+
+      {/* 2. Workflow Embedded */}
+      <div className="bg-white p-6 border border-black/5 flex flex-col items-center text-center">
+        <div className="w-16 h-16 mb-4 relative flex items-center justify-center">
+          <svg viewBox="0 0 64 64" className="w-full h-full stroke-black fill-none stroke-2">
+            <path d="M 8 32 L 20 32" />
+            <rect x="20" y="20" width="24" height="24" rx="2" />
+            <path d="M 44 32 L 56 32" />
+            <circle cx="32" cy="32" r="4" className="fill-black" />
+            <path d="M 52 28 L 56 32 L 52 36" />
+          </svg>
+        </div>
+        <h4 className="font-medium mb-2">Workflow-embedded</h4>
+        <p className="text-xs text-paper-sub">Triggered in-flow, not isolated chat</p>
+      </div>
+
+      {/* 3. Transparent & Iterative */}
+      <div className="bg-white p-6 border border-black/5 flex flex-col items-center text-center">
+        <div className="w-16 h-16 mb-4 relative flex items-center justify-center">
+          <svg viewBox="0 0 64 64" className="w-full h-full stroke-black fill-none stroke-2">
+            <rect x="16" y="16" width="32" height="32" rx="2" className="stroke-black/30" />
+            <rect x="20" y="20" width="32" height="32" rx="2" className="fill-white" />
+            <path d="M 28 36 L 34 42 L 44 32" />
+          </svg>
+        </div>
+        <h4 className="font-medium mb-2">Transparent</h4>
+        <p className="text-xs text-paper-sub">Visible, editable, specific optimization</p>
+      </div>
+    </div>
+  );
+};
+
+export const AiMechanismFlow: React.FC = () => {
+  return (
+    <div className="w-full aspect-[21/9] bg-[#F9F9F7] border border-black/5 relative overflow-hidden flex items-center justify-center">
+      <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(#000000 0.5px, transparent 0.5px)', backgroundSize: '16px 16px' }}></div>
+
+      <svg viewBox="0 0 800 300" className="w-full max-w-2xl stroke-black fill-none stroke-1.5 font-sans text-xs">
+        <defs>
+          <marker id="arrow-sm" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <path d="M 0 0 L 6 3 L 0 6" fill="none" stroke="black" />
+          </marker>
+        </defs>
+
+        {/* Access Points */}
+        <g transform="translate(50, 100)">
+          <rect width="100" height="60" rx="4" fill="white" stroke="black" />
+          <text x="50" y="35" textAnchor="middle" fill="black" stroke="none" className="font-medium">Trigger</text>
+          <text x="50" y="50" textAnchor="middle" fill="black" stroke="none" className="text-[9px] opacity-60">Slash / Quick Add</text>
+        </g>
+
+        {/* Generation */}
+        <g transform="translate(250, 80)">
+          <rect width="120" height="100" rx="4" fill="white" stroke="black" strokeDasharray="4 4" />
+          <text x="60" y="45" textAnchor="middle" fill="black" stroke="none" className="font-medium">Generation</text>
+          <path d="M 20 60 L 100 60" strokeOpacity="0.1" />
+          <path d="M 20 70 L 80 70" strokeOpacity="0.1" />
+          <text x="60" y="55" textAnchor="middle" fill="black" stroke="none" className="text-[9px] opacity-60">Preview Mode</text>
+        </g>
+
+        {/* Refine Loop */}
+        <g transform="translate(470, 100)">
+          <circle cx="50" cy="30" r="40" fill="white" stroke="black" />
+          <text x="50" y="35" textAnchor="middle" fill="black" stroke="none" className="font-medium">Refine</text>
+        </g>
+
+        {/* Output */}
+        <g transform="translate(650, 100)">
+          <rect width="100" height="60" rx="4" fill="black" stroke="none" />
+          <text x="50" y="35" textAnchor="middle" fill="white" stroke="none" className="font-medium">Module</text>
+        </g>
+
+        {/* Connections */}
+        <path d="M 150 130 L 250 130" markerEnd="url(#arrow-sm)" />
+        <path d="M 370 130 L 430 130" markerEnd="url(#arrow-sm)" />
+        <path d="M 560 130 L 650 130" markerEnd="url(#arrow-sm)" />
+
+        {/* Loop Back */}
+        <path d="M 520 170 Q 520 220 310 220 Q 310 220 310 180" markerEnd="url(#arrow-sm)" strokeDasharray="4 4" opacity="0.4" />
+        <text x="415" y="210" fill="black" stroke="none" className="text-[9px] italic opacity-60">Contextual Follow-up</text>
+
+      </svg>
+    </div>
+  );
+};
+
+export const EditorToViewerDiagram: React.FC = () => {
+  return (
+    <div className="w-full bg-paper-dark text-white aspect-[21/9] flex relative overflow-hidden border border-white/10">
+      {/* Background Grid */}
+      <div className="absolute inset-0 opacity-10"
+        style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+      />
+
+      {/* Editor Side */}
+      <div className="flex-1 border-r border-white/10 p-8 flex flex-col justify-center items-center relative group">
+        <div className="text-xs uppercase tracking-widest mb-4 opacity-50">Creator View (Editor)</div>
+        <div className="w-32 h-40 bg-white/5 border border-white/20 rounded p-3 relative">
+          {/* Abstract Code Lines */}
+          <div className="w-16 h-2 bg-white/20 mb-2 rounded-sm" />
+          <div className="w-24 h-2 bg-white/20 mb-2 rounded-sm" />
+          <div className="w-20 h-2 bg-white/20 mb-2 rounded-sm" />
+
+          {/* AI Prompt Box */}
+          <div className="absolute bottom-4 left-2 right-2 h-8 bg-blue-500/20 border border-blue-500/50 rounded flex items-center px-2">
+            <div className="w-1 h-3 bg-blue-400 animate-pulse" />
+          </div>
+        </div>
+        <p className="mt-8 text-sm text-center max-w-[200px] opacity-70">AI generates & fixes modules</p>
+      </div>
+
+      {/* Transition Arrow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-paper-dark p-2 rounded-full border border-white/20">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M 4 12 L 20 12 M 16 8 L 20 12 L 16 16" />
+        </svg>
+      </div>
+
+      {/* Viewer Side */}
+      <div className="flex-1 p-8 flex flex-col justify-center items-center relative">
+        <div className="text-xs uppercase tracking-widest mb-4 opacity-50">Audience View (Viewer)</div>
+        <div className="w-32 h-40 bg-white/5 border border-white/20 rounded p-3 relative flex flex-col items-center justify-center">
+          {/* Chart Visual */}
+          <div className="w-16 h-16 rounded-full border-4 border-white/10 border-t-blue-400 mb-2" />
+
+          {/* AI Explanation Tooltip */}
+          <div className="absolute -right-12 top-8 bg-white text-black text-[9px] px-2 py-1 rounded shadow-lg">
+            "Why this model?"
+            <div className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 bg-white rotate-45" />
+          </div>
+        </div>
+        <p className="mt-8 text-sm text-center max-w-[200px] opacity-70">AI explains & answers "What if?"</p>
+      </div>
+    </div>
+  );
+};
