@@ -2,6 +2,8 @@ import React from 'react';
 
 import { ProjectMeta } from '../types';
 
+const BASE = import.meta.env.BASE_URL;
+
 const META_DATA: ProjectMeta = {
   role: "Sole Product Designer",
   team: "Design, Dev, AI Team",
@@ -19,7 +21,7 @@ const CaseStudy: React.FC = () => {
 
           {/* Hero Image */}
           <div className="w-full h-auto md:h-[546px] rounded-2xl md:rounded-[16px] overflow-hidden bg-paper-bg">
-            <img src="/assets/images/hero/cover.png" alt="Hero Cover" className="w-full h-full object-cover" />
+            <img src={`${BASE}assets/images/hero/cover.png`} alt="Hero Cover" className="w-full h-full object-cover" />
           </div>
 
           {/* Hero Info */}
@@ -128,7 +130,7 @@ const CaseStudy: React.FC = () => {
 
             {/* Illustration */}
             <div className="flex-1 rounded-lg md:rounded-[8px] overflow-hidden min-h-[250px] md:h-[365px]">
-              <img src="/assets/images/section-1/painpoint.png" alt="Painpoints Visual" className="w-full h-full object-cover" />
+              <img src={`${BASE}assets/images/section-1/painpoint.png`} alt="Painpoints Visual" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -163,7 +165,7 @@ const CaseStudy: React.FC = () => {
 
             {/* Split Right: Media */}
             <div className="flex-1 rounded-2xl md:rounded-[16px] h-[300px] md:h-[400px] overflow-hidden shadow-2xl shadow-black/5">
-              <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session" className="w-full h-full object-cover" />
+              <img src={`${BASE}assets/images/section-2/workshop.jpg`} alt="Workshop Session" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -226,7 +228,7 @@ const CaseStudy: React.FC = () => {
               </div>
               <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
                 <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
-                  <img src="/assets/images/section-3/Feature-general.png" alt="General Behaviors" className="w-full h-full object-cover" />
+                  <img src={`${BASE}assets/images/section-3/Feature-general.png`} alt="General Behaviors" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -250,7 +252,7 @@ const CaseStudy: React.FC = () => {
               </div>
               <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
                 <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
-                  <img src="/assets/images/section-3/Feature-code.png" alt="Code Modules" className="w-full h-full object-contain p-2" />
+                  <img src={`${BASE}assets/images/section-3/Feature-code.png`} alt="Code Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
             </div>
@@ -276,7 +278,7 @@ const CaseStudy: React.FC = () => {
               </div>
               <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
                 <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
-                  <img src="/assets/images/section-3/Feature-visualization.png" alt="Visualization Modules" className="w-full h-full object-contain p-2" />
+                  <img src={`${BASE}assets/images/section-3/Feature-visualization.png`} alt="Visualization Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
             </div>
@@ -297,12 +299,12 @@ const CaseStudy: React.FC = () => {
             <div className="mb-12 md:mb-16 relative w-64 h-32 md:w-72 md:h-36 flex items-center justify-center">
               {/* Paper Branding Logo - Left Card (Bottom) */}
               <div className="absolute left-0 bottom-0 w-24 h-24 md:w-28 md:h-28 bg-white shadow-xl shadow-black/5 rounded-[24px] flex items-center justify-center z-10 transition-all duration-500 hover:-translate-y-2 hover:z-30">
-                <img src="/assets/images/logos/Paper.svg" alt="Paper Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                <img src={`${BASE}assets/images/logos/Paper.svg`} alt="Paper Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
               </div>
 
               {/* ODE-AI Logo - Right Card (Top, Overlapping) */}
               <div className="absolute right-0 top-0 w-24 h-24 md:w-28 md:h-28 bg-white shadow-2xl shadow-black/10 rounded-[24px] flex items-center justify-center z-20 transition-all duration-500 hover:-translate-y-2 hover:z-30 border border-black/[0.03]">
-                <img src="/assets/images/logos/ODE-AI.svg" alt="ODE AI Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                <img src={`${BASE}assets/images/logos/ODE-AI.svg`} alt="ODE AI Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
               </div>
             </div>
 
@@ -318,7 +320,7 @@ const CaseStudy: React.FC = () => {
             {/* Mech 1 */}
             <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[48px] items-center">
               <div className="flex-1 bg-white rounded-2xl md:rounded-[16px] p-4 md:p-[24px]">
-                <img src="/assets/images/section-4/Demo-1.gif" alt="Context-aware generation" className="w-full h-auto rounded-lg" />
+                <img src={`${BASE}assets/images/section-4/Demo-1.gif`} alt="Context-aware generation" className="w-full h-auto rounded-lg" />
               </div>
               <div className="md:w-[400px] flex flex-col gap-4">
                 <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">AI Integration in Outline</h4>
@@ -333,7 +335,7 @@ const CaseStudy: React.FC = () => {
               {/* Mech 2 */}
               <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
                 <div className="w-full h-[300px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
-                  <img src="/assets/images/section-4/Demo-2.gif" alt="AI Assistance in Code Module" className="w-full h-full object-cover" />
+                  <img src={`${BASE}assets/images/section-4/Demo-2.gif`} alt="AI Assistance in Code Module" className="w-full h-full object-cover" />
                 </div>
                 <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">AI Assistance in Code Module</h4>
                 <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
@@ -344,7 +346,7 @@ const CaseStudy: React.FC = () => {
               {/* Mech 3 */}
               <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
                 <div className="w-full h-[300px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
-                  <img src="/assets/images/section-4/Demo-3.gif" alt="Quick Add Modules for Next Step" className="w-full h-full object-cover" />
+                  <img src={`${BASE}assets/images/section-4/Demo-3.gif`} alt="Quick Add Modules for Next Step" className="w-full h-full object-cover" />
                 </div>
                 <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">Quick Add Modules for Next Step</h4>
                 <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
