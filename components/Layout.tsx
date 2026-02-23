@@ -16,11 +16,11 @@ export const FadeIn: React.FC<FadeInProps> = ({ children, delay = 0, className =
 
 export const Section: React.FC<SectionProps> = ({ children, className = '', id, fullWidth = false }) => {
   return (
-    <section 
-      id={id} 
+    <section
+      id={id}
       className={`w-full py-24 md:py-32 relative ${className}`}
     >
-      <div className={`mx-auto px-6 md:px-12 ${fullWidth ? 'max-w-none' : 'max-w-screen-2xl'}`}>
+      <div className={`mx-auto px-8 md:px-20 lg:px-32 ${fullWidth ? 'max-w-none' : 'max-w-screen-2xl'}`}>
         {children}
       </div>
     </section>

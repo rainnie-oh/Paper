@@ -1,0 +1,2134 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "fO63u",
+      "x": 0,
+      "y": 0,
+      "name": "Button/Primary",
+      "reusable": true,
+      "fill": "$bg-button-primary",
+      "cornerRadius": "$radius-sm",
+      "effect": {
+        "type": "shadow",
+        "shadowType": "outer",
+        "color": "#1A000000",
+        "offset": {
+          "x": 0,
+          "y": 1
+        },
+        "blur": 1
+      },
+      "padding": [
+        10,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Hgugh",
+          "name": "Label",
+          "fill": "$text-onDark",
+          "content": "Button",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "500",
+          "letterSpacing": -0.16
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Shd0A",
+      "x": -24,
+      "y": 1793,
+      "name": "Hero Block",
+      "reusable": true,
+      "width": 1100,
+      "layout": "vertical",
+      "gap": 50,
+      "padding": [
+        80,
+        0
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "t344u",
+          "type": "ref",
+          "ref": "XCALA",
+          "name": "heroPill",
+          "descendants": {
+            "lBsdj": {
+              "content": "Case study"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "ag9Pd",
+          "name": "Text Group",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "u6jVP",
+              "name": "Heading",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Project title goes here.",
+              "lineHeight": 1.081,
+              "textAlign": "center",
+              "fontFamily": "Red Hat Display",
+              "fontSize": 74,
+              "fontWeight": "normal",
+              "letterSpacing": -1.2
+            },
+            {
+              "type": "text",
+              "id": "uRa4k",
+              "name": "Subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 455,
+              "content": "A short subtitle describing the project scope and key outcome.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "letterSpacing": -0.18
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6MlSq",
+          "name": "Hero Media",
+          "width": 1000,
+          "height": 560,
+          "fill": "$bg-surface",
+          "cornerRadius": "$radius-lg",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RfMjc",
+              "name": "Placeholder",
+              "fill": "$text-secondary",
+              "content": "Hero media placeholder",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "id": "fuXyo",
+          "type": "ref",
+          "ref": "fO63u",
+          "name": "heroAction",
+          "descendants": {
+            "Hgugh": {
+              "content": "View demo"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ABG85",
+      "x": 0,
+      "y": 80,
+      "name": "Button/Secondary",
+      "reusable": true,
+      "fill": "$bg-button-secondary",
+      "cornerRadius": "$radius-sm",
+      "padding": [
+        10,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "ylHeE",
+          "name": "Label",
+          "fill": "$text-primary",
+          "content": "Button",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "500",
+          "letterSpacing": -0.16
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Pw9SO",
+      "x": 0,
+      "y": 160,
+      "name": "Button/Link",
+      "reusable": true,
+      "padding": [
+        10,
+        4
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "kKTiJ",
+          "name": "Label",
+          "fill": "$link-color",
+          "content": "Learn more",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "500",
+          "letterSpacing": -0.16
+        },
+        {
+          "type": "text",
+          "id": "yCb2X",
+          "name": "Arrow",
+          "fill": "$link-color",
+          "content": "→",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "0qcjX",
+      "x": -1092,
+      "y": 2531,
+      "name": "Demo CTA Block",
+      "reusable": true,
+      "width": 1100,
+      "fill": "$bg-cta-accent",
+      "cornerRadius": "$radius-xl",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        64,
+        80
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "qArDz",
+          "name": "Title",
+          "fill": "$text-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "See it in action.",
+          "lineHeight": 1.077,
+          "textAlign": "center",
+          "fontFamily": "Red Hat Display",
+          "fontSize": 52,
+          "fontWeight": "normal",
+          "letterSpacing": -0.8
+        },
+        {
+          "type": "text",
+          "id": "89vyA",
+          "name": "Supporting Text",
+          "fill": "$text-secondary",
+          "content": "Try the interactive demo to see how it works.",
+          "lineHeight": 1.5,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "letterSpacing": -0.18
+        },
+        {
+          "id": "X1XXO",
+          "type": "ref",
+          "ref": "fO63u",
+          "name": "demoCtaButton",
+          "descendants": {
+            "Hgugh": {
+              "content": "View demo"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XCALA",
+      "x": 200,
+      "y": 0,
+      "name": "Pill",
+      "reusable": true,
+      "fill": "$accent-bg",
+      "cornerRadius": "$radius-sm",
+      "padding": [
+        6,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "lBsdj",
+          "name": "Label",
+          "fill": "$accent",
+          "content": "Badge label",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "OwVwi",
+      "x": 200,
+      "y": 80,
+      "name": "Divider",
+      "reusable": true,
+      "width": 1100,
+      "height": 1,
+      "fill": "$border-default"
+    },
+    {
+      "type": "frame",
+      "id": "t6dcu",
+      "x": 200,
+      "y": 120,
+      "name": "Link/Inline",
+      "reusable": true,
+      "gap": 4,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "MlxME",
+          "name": "Label",
+          "fill": "$link-color",
+          "content": "Inline link",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "letterSpacing": -0.18
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Ls5U1",
+      "x": 0,
+      "y": 300,
+      "name": "Section Heading",
+      "reusable": true,
+      "width": 1100,
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "text",
+          "id": "CT99H",
+          "name": "Heading",
+          "fill": "$text-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Section heading.",
+          "lineHeight": 1.077,
+          "fontFamily": "Red Hat Display",
+          "fontSize": 52,
+          "fontWeight": "normal",
+          "letterSpacing": -0.8
+        },
+        {
+          "type": "text",
+          "id": "TnbX1",
+          "name": "Supporting Text",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": 455,
+          "content": "Optional supporting line that provides additional context",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "letterSpacing": -0.18
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "d1nyW",
+      "x": 0,
+      "y": 500,
+      "name": "Card/ContentOnly",
+      "reusable": true,
+      "width": 360,
+      "fill": "$bg-surface",
+      "cornerRadius": "$radius-xl",
+      "layout": "vertical",
+      "gap": 8,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "xB8M9",
+          "name": "Title",
+          "fill": "$text-primary",
+          "content": "Card title",
+          "lineHeight": 1.389,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "92vKL",
+          "name": "Body",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Support text that provides additional context about this item and helps the reader understand key details.",
+          "lineHeight": 1.5,
+          "fontFamily": "Funnel Sans",
+          "fontSize": 18,
+          "letterSpacing": -0.18
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ANzYo",
+      "x": 0,
+      "y": 750,
+      "name": "Card/Split",
+      "reusable": true,
+      "width": 800,
+      "fill": "$bg-surface",
+      "cornerRadius": "$radius-xl",
+      "padding": 12,
+      "children": [
+        {
+          "type": "frame",
+          "id": "NZozt",
+          "name": "Media",
+          "width": 400,
+          "height": 400,
+          "fill": "$bg-surface-alt",
+          "cornerRadius": "$radius-lg",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KfrN8",
+              "name": "Placeholder",
+              "fill": "$text-secondary",
+              "content": "Media",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dAmDH",
+          "name": "Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            40,
+            32
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TcM6a",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Feature title",
+              "lineHeight": 1.389,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "RgyCA",
+              "name": "Body",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Support text that describes what this feature does and why it matters in the context of the case study.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "letterSpacing": -0.18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "HiLQq",
+      "x": -62,
+      "y": 1250,
+      "name": "Card/GridSmall",
+      "reusable": true,
+      "width": 410,
+      "fill": "$bg-surface",
+      "cornerRadius": "$radius-lg",
+      "layout": "vertical",
+      "gap": 10,
+      "children": [
+        {
+          "type": "frame",
+          "id": "CVfOm",
+          "name": "Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "eojPd",
+              "name": "Icon",
+              "width": 48,
+              "height": 48,
+              "fill": "$bg-surface-alt",
+              "cornerRadius": "$radius-md",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "1CoOE",
+                  "name": "Glyph",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "layers",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "0LlTm",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Card title",
+              "lineHeight": 1.389,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "CYvI8",
+              "name": "Body",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Brief description of this capability or feature.",
+              "lineHeight": 1.448,
+              "fontFamily": "Inter",
+              "fontSize": 14.5,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3047A",
+          "name": "Content",
+          "width": "fill_container",
+          "cornerRadius": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 8,
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 8,
+              "id": "RkgwX",
+              "fill": "#ffffffff",
+              "width": "fill_container",
+              "height": 295.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "SgcwP",
+      "x": 400,
+      "y": 1250,
+      "name": "Card/GridCompact",
+      "reusable": true,
+      "width": 260,
+      "fill": "$bg-surface",
+      "cornerRadius": "$radius-lg",
+      "layout": "vertical",
+      "gap": 8,
+      "padding": 20,
+      "children": [
+        {
+          "type": "text",
+          "id": "4usHl",
+          "name": "Title",
+          "fill": "$text-primary",
+          "content": "Card title",
+          "lineHeight": 1.2,
+          "fontFamily": "Inter",
+          "fontSize": 16.5,
+          "fontWeight": "600",
+          "letterSpacing": 0.165
+        },
+        {
+          "type": "text",
+          "id": "CQdck",
+          "name": "Body",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Short description.",
+          "lineHeight": 1.448,
+          "fontFamily": "Inter",
+          "fontSize": 14.5,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "TwoFk",
+      "x": 700,
+      "y": 1250,
+      "name": "Card/FeatureLink",
+      "reusable": true,
+      "width": 360,
+      "fill": "$bg-surface",
+      "cornerRadius": "$radius-xl",
+      "padding": 24,
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "cfgG2",
+          "name": "Left",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "0BWwM",
+              "name": "Icon",
+              "width": 48,
+              "height": 48,
+              "fill": "$bg-surface-alt",
+              "cornerRadius": "$radius-md",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "bENQ3",
+                  "name": "Glyph",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "external-link",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "LvILh",
+              "name": "Label",
+              "fill": "$text-primary",
+              "content": "View demo",
+              "lineHeight": 1.389,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "mhDqf",
+          "name": "Arrow",
+          "fill": "$text-secondary",
+          "content": "→",
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xZzRD",
+      "x": 1440,
+      "y": 0,
+      "name": "Paper Case Study",
+      "width": 1440,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "padding": [
+        0,
+        0,
+        80,
+        0
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "l4WiO",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "DdLQf",
+              "name": "Hero Image",
+              "width": "fill_container",
+              "height": 546,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1624800131361-c94113025a62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE3MjgxODB8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": "$radius-lg"
+            },
+            {
+              "type": "frame",
+              "id": "OB11F",
+              "name": "Hero Info",
+              "width": "fill_container",
+              "gap": 72,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZQGJz",
+                  "name": "Title",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "6aKGF",
+                      "name": "Title Column",
+                      "width": 380,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "J5m84",
+                          "name": "Project Title",
+                          "fill": "$text-primary",
+                          "content": "ODE-Paper",
+                          "lineHeight": 1.077,
+                          "fontFamily": "$font-display",
+                          "fontSize": 52,
+                          "fontWeight": "normal",
+                          "letterSpacing": -0.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jtbSY",
+                      "name": "Title Column",
+                      "width": 380,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "93BSv",
+                          "name": "Project Title",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Interactive Analysis Notebook for Engineers",
+                          "lineHeight": 1.077,
+                          "fontFamily": "$font-display",
+                          "fontSize": 18,
+                          "letterSpacing": -0.8
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fdCsv",
+                  "name": "Info Column",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hb2DT",
+                      "name": "Brief Label",
+                      "fill": "$text-secondary",
+                      "content": "(brief)",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7m0j1",
+                      "name": "Brief Body",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Built 0→1 modular system unifying code, parameters, and visualization into dynamic documents. ",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$font-body",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.18
+                    },
+                    {
+                      "id": "q6k1k",
+                      "type": "ref",
+                      "ref": "OwVwi",
+                      "width": "fill_container",
+                      "name": "divider1"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MOPD9",
+                      "name": "Meta Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "SJZVz",
+                          "name": "Meta: Timeline",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GuabX",
+                              "name": "metaCol1Label",
+                              "fill": "$text-secondary",
+                              "content": "Timeline",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 12
+                            },
+                            {
+                              "type": "text",
+                              "id": "oIjyP",
+                              "name": "metaCol1Value",
+                              "fill": "$text-primary",
+                              "content": "2024.05–2024.12",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "THLwU",
+                          "name": "Meta: Tools",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "kckQm",
+                              "name": "metaCol2Label",
+                              "fill": "$text-secondary",
+                              "content": "Tools",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 12
+                            },
+                            {
+                              "type": "text",
+                              "id": "n3nZG",
+                              "name": "metaCol2Value",
+                              "fill": "$text-primary",
+                              "content": "Figma, AI Studio",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bgNZf",
+                          "name": "Meta: Role",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KTeNU",
+                              "name": "metaCol3Label",
+                              "fill": "$text-secondary",
+                              "content": "Role",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 12
+                            },
+                            {
+                              "type": "text",
+                              "id": "zjXu2",
+                              "name": "metaCol3Value",
+                              "fill": "$text-primary",
+                              "content": "Product designer",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TYBZd",
+                          "name": "Meta: Status",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "d0IPV",
+                              "name": "metaCol4Label",
+                              "fill": "$text-secondary",
+                              "content": "Status",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 12
+                            },
+                            {
+                              "type": "text",
+                              "id": "wRGhz",
+                              "name": "metaCol4Value",
+                              "fill": "$text-primary",
+                              "content": "In Beta",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "C4bU4",
+                      "type": "ref",
+                      "ref": "OwVwi",
+                      "width": "fill_container",
+                      "name": "divider2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XflaF",
+          "name": "Section 1 – Pain Points",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "id": "hAVn1",
+              "type": "ref",
+              "ref": "Ls5U1",
+              "width": "fill_container",
+              "name": "s1Heading",
+              "padding": 0,
+              "descendants": {
+                "CT99H": {
+                  "content": "Background"
+                },
+                "TnbX1": {
+                  "content": "Engineers writing technical reports constantly switch between tools, leading to:",
+                  "textGrowth": "fixed-width",
+                  "width": 455,
+                  "height": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "x": 0,
+                  "y": 68
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "mMTo7",
+              "name": "DualColumn",
+              "width": "fill_container",
+              "fill": "$bg-surface",
+              "cornerRadius": "$radius-xl",
+              "gap": 66,
+              "padding": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "POLmU",
+                  "name": "Frame 1",
+                  "width": 275,
+                  "layout": "vertical",
+                  "gap": 98,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iPY2m",
+                      "name": "Phase 1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "YTOYJ",
+                          "type": "ref",
+                          "ref": "XCALA",
+                          "name": "pillAuth",
+                          "fill": "#a9702014",
+                          "cornerRadius": "$radius-sm",
+                          "width": "fit_content",
+                          "height": 38,
+                          "flipX": false,
+                          "flipY": false,
+                          "x": 0,
+                          "y": 0,
+                          "descendants": {
+                            "lBsdj": {
+                              "content": "Authoring",
+                              "fill": "$accent-orange",
+                              "x": 16,
+                              "y": 5.5
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "TdKrZ",
+                          "name": "bodyAuth",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "The authoring process is fragmented across disconnected environments.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500",
+                          "letterSpacing": -0.18
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gZOxP",
+                      "name": "Phase 2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "0x3Aa",
+                          "type": "ref",
+                          "ref": "XCALA",
+                          "name": "pillDel",
+                          "cornerRadius": "$radius-sm",
+                          "descendants": {
+                            "lBsdj": {
+                              "content": "Delivery"
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "F63Rk",
+                          "name": "bodyDel",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "When engineering papers can't be run, verified, or interacted with, they become black boxes. ",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500",
+                          "letterSpacing": -0.18
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LblGk",
+                  "name": "Section 1 Illustration",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 365,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/section-1/painpoint.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TkhJd",
+              "name": "Paper's solution Callout",
+              "width": "fill_container",
+              "fill": "#070708ff",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": 64,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iIFTP",
+                  "fill": "#FFFFFF",
+                  "content": "Paper's solution",
+                  "fontFamily": "Red Hat Display",
+                  "fontSize": 32,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "IfzyD",
+                  "fill": "#94A3B8",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Unified environment where writing = analysis = presentation. What's delivered isn't a static report, but an explorable, reproducible interactive document.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ordnG",
+          "name": "Section 2 – Module Foundation",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "id": "qb6da",
+              "type": "ref",
+              "ref": "Ls5U1",
+              "width": "fill_container",
+              "name": "s2Heading",
+              "padding": 0,
+              "descendants": {
+                "CT99H": {
+                  "content": "Product defining"
+                },
+                "TnbX1": {
+                  "content": "To define the product scope and clarify core requirements, I organized a workshop with the team using physical cards to simulate real user workflows."
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "pGlJx",
+              "name": "Media",
+              "width": 239,
+              "height": 239,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/section-2/workshop.jpg",
+                "mode": "fill"
+              },
+              "cornerRadius": "$radius-lg",
+              "layout": "vertical",
+              "padding": 24,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "m3piK",
+                  "name": "Placeholder",
+                  "fill": "$text-secondary",
+                  "content": "Media",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rS9UY",
+              "name": "Core Insights",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9lpz5",
+                  "name": "InsightBlock 1",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": "$radius-xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "id": "g6aOW",
+                      "type": "ref",
+                      "ref": "XCALA",
+                      "name": "insight1Num",
+                      "x": 32,
+                      "y": 32,
+                      "descendants": {
+                        "lBsdj": {
+                          "content": "01"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "lUWN4",
+                      "name": "insight1Title",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Users need to reference data from multiple sources.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Red Hat Display",
+                      "fontSize": 28,
+                      "fontWeight": "normal",
+                      "letterSpacing": -0.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "emGl6",
+                      "name": "insight1Body",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Engineers pull data from different places — models from ODE simulation apps, code, external table files — and combine them into analysis workflows.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.18
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cp91z",
+                  "name": "InsightBlock 2",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": "$radius-xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "id": "nBn8b",
+                      "type": "ref",
+                      "ref": "XCALA",
+                      "name": "insight2Num",
+                      "x": 32,
+                      "y": 32,
+                      "descendants": {
+                        "lBsdj": {
+                          "content": "02"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "CRT30",
+                      "name": "insight2Title",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Modules need clear roles and relationships.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Red Hat Display",
+                      "fontSize": 28,
+                      "fontWeight": "normal",
+                      "letterSpacing": -0.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "AfSaW",
+                      "name": "insight2Body",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Different modules serve different purposes (Code executes, Chart/Table visualizes, Text displays) and can form relationships.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.18
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DZ3Vh",
+              "name": "Design Decision",
+              "width": "fill_container",
+              "fill": "$bg-elevated",
+              "cornerRadius": "$radius-xl",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 48,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fN8Ik",
+                  "fill": "$text-primary",
+                  "content": "Design decision",
+                  "fontFamily": "Red Hat Display",
+                  "fontSize": 24,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "jx3OO",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "A modular system where Code, Text, Table, Plot can be assembled like building blocks, with parent-child binding for traceability and automatic updates.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UmCzd",
+          "name": "Section 3 – Interaction Design",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "id": "uqPPW",
+              "type": "ref",
+              "ref": "Ls5U1",
+              "width": "fill_container",
+              "name": "s3Heading",
+              "padding": 0,
+              "descendants": {
+                "CT99H": {
+                  "content": "Interaction & component design."
+                },
+                "TnbX1": {
+                  "content": "All modules share unified behaviors and can be composed into complex analysis workflows."
+                }
+              }
+            },
+            {
+              "id": "usHhn",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "splitGeneral",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732866283.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "General module capabilities"
+                },
+                "RgyCA": {
+                  "content": "All modules share unified behaviors: drag to reposition, resize, slash-command insertion. Parent-child relationships bind modules to data sources for data traceability and automatic updates."
+                }
+              }
+            },
+            {
+              "id": "cUUlu",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "splitCode",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732874000.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "Code module"
+                },
+                "RgyCA": {
+                  "content": "Dual-view switching (code ⇄ diagram) with upstream data binding capability. Engineers can write code and instantly see the visual output, or start from a diagram and generate the underlying code."
+                }
+              }
+            },
+            {
+              "id": "gsyqr",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "splitViz",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732846748.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "KfrN8": {
+                  "x": 179,
+                  "y": 191.5
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "Visualization modules"
+                },
+                "RgyCA": {
+                  "content": "Table and Plot can switch views within the same module while preserving data source. This means one module can render as a data table or a chart, depending on what the engineer needs at the moment."
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "MtAL8",
+              "name": "Design Principles Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                16,
+                0
+              ],
+              "children": [
+                {
+                  "id": "LO5n4",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p1",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 0,
+                  "y": 16
+                },
+                {
+                  "id": "lhQrW",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p2",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 434.6666666666667,
+                  "y": 16,
+                  "descendants": {
+                    "3047A": {
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/section-3/Feature-visualization.png",
+                        "mode": "fit"
+                      }
+                    },
+                    "RkgwX": {
+                      "fill": []
+                    }
+                  }
+                },
+                {
+                  "id": "2aX8F",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p3",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 869.3333333333334,
+                  "y": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uFuAK",
+          "name": "Section 4 – AI Integration",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "id": "9yl3o",
+              "type": "ref",
+              "ref": "Ls5U1",
+              "width": "fill_container",
+              "name": "s4Heading",
+              "padding": 0,
+              "descendants": {
+                "CT99H": {
+                  "content": "AI + module-based."
+                },
+                "TnbX1": {
+                  "content": "With modular structure and parent-child relationships in place, AI can understand complete workflows."
+                }
+              }
+            },
+            {
+              "id": "pI3VQ",
+              "type": "ref",
+              "ref": "d1nyW",
+              "width": "fill_container",
+              "name": "aiDefCard",
+              "padding": 48,
+              "descendants": {
+                "xB8M9": {
+                  "content": "Paper's AI definition",
+                  "x": 48,
+                  "y": 48
+                },
+                "92vKL": {
+                  "content": "AI shouldn't be a general chatbot — it should be a collaborator embedded in the workflow. Context-aware, triggered at friction points, and fully transparent about its reasoning.",
+                  "width": "fill_container",
+                  "height": 81,
+                  "x": 48,
+                  "y": 81
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "NsL1H",
+              "name": "Design Principles Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                16,
+                0
+              ],
+              "children": [
+                {
+                  "id": "U2pbU",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p1",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 0,
+                  "y": 16
+                },
+                {
+                  "id": "2nVLu",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p2",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 434.6666666666667,
+                  "y": 16
+                },
+                {
+                  "id": "L8TzB",
+                  "type": "ref",
+                  "ref": "HiLQq",
+                  "width": "fill_container",
+                  "name": "p3",
+                  "fill": "$bg-surface",
+                  "padding": 24,
+                  "cornerRadius": "$radius-xl",
+                  "height": "fit_content",
+                  "x": 869.3333333333334,
+                  "y": 16
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "y6RHX",
+              "name": "mechLabel",
+              "fill": "$text-primary",
+              "content": "Core mechanisms",
+              "lineHeight": 1.2,
+              "fontFamily": "Red Hat Display",
+              "fontSize": 28,
+              "fontWeight": "normal",
+              "letterSpacing": -0.4
+            },
+            {
+              "id": "qYhpY",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "mech1",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732853134.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "KfrN8": {
+                  "x": 179,
+                  "y": 191.5
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "Module-specific AI commands"
+                },
+                "RgyCA": {
+                  "content": "Code modules: generate, fix errors, refactor. Table/Plot modules: analyze data, create visualizations, natural language Q&A. AI provides relevant commands based on module type."
+                }
+              }
+            },
+            {
+              "id": "dmXNP",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "mech2",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732860530.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "Dual entry points"
+                },
+                "RgyCA": {
+                  "content": "Quick Add: Generate new modules based on existing results. In-module invoke: Refine current module content. Both show preview before acceptance."
+                }
+              }
+            },
+            {
+              "id": "rmzFr",
+              "type": "ref",
+              "ref": "ANzYo",
+              "width": "fill_container",
+              "name": "mech3",
+              "padding": 12,
+              "descendants": {
+                "NZozt": {
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771732867924.png",
+                    "mode": "fill"
+                  },
+                  "padding": 24
+                },
+                "dAmDH": {
+                  "padding": 48
+                },
+                "TcM6a": {
+                  "content": "Transparent provenance"
+                },
+                "RgyCA": {
+                  "content": "Every AI-generated output displays its data source and reasoning path — building trust and enabling verification."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "f2Lj7",
+          "name": "Section 5 – Impact",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "children": [
+            {
+              "id": "ITOkk",
+              "type": "ref",
+              "ref": "Ls5U1",
+              "width": "fill_container",
+              "name": "s5Heading",
+              "padding": 0,
+              "descendants": {
+                "CT99H": {
+                  "content": "Impact & future directions."
+                },
+                "TnbX1": {
+                  "content": "Launched public beta December 2025."
+                }
+              }
+            },
+            {
+              "type": "text",
+              "id": "JecgP",
+              "name": "impactBody",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "Since launch, we've welcomed ODE Believers from institutions including German Aerospace Center, Rensselaer Polytechnic Institute, Technical University of Munich, and LTX Simulation GmbH.",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "letterSpacing": -0.18
+            },
+            {
+              "type": "frame",
+              "id": "cimZf",
+              "name": "Institution Pills",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "flP8o",
+                  "type": "ref",
+                  "ref": "XCALA",
+                  "name": "inst1",
+                  "descendants": {
+                    "lBsdj": {
+                      "content": "German Aerospace Center"
+                    }
+                  }
+                },
+                {
+                  "id": "fwVBV",
+                  "type": "ref",
+                  "ref": "XCALA",
+                  "name": "inst2",
+                  "descendants": {
+                    "lBsdj": {
+                      "content": "Rensselaer Polytechnic Institute"
+                    }
+                  }
+                },
+                {
+                  "id": "NaTYH",
+                  "type": "ref",
+                  "ref": "XCALA",
+                  "name": "inst3",
+                  "descendants": {
+                    "lBsdj": {
+                      "content": "TU Munich"
+                    }
+                  }
+                },
+                {
+                  "id": "85JB4",
+                  "type": "ref",
+                  "ref": "XCALA",
+                  "name": "inst4",
+                  "descendants": {
+                    "lBsdj": {
+                      "content": "LTX Simulation"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "PMgDM",
+              "type": "ref",
+              "ref": "d1nyW",
+              "width": "fill_container",
+              "name": "nextStepCard",
+              "padding": 32,
+              "fill": "$bg-surface",
+              "cornerRadius": "$radius-xl",
+              "descendants": {
+                "xB8M9": {
+                  "content": "Next step",
+                  "x": 32,
+                  "y": 32
+                },
+                "92vKL": {
+                  "content": "Viewer-side AI: enabling readers to ask questions and explore results interactively — turning static consumption into active investigation.",
+                  "width": "fill_container",
+                  "height": 81,
+                  "x": 32,
+                  "y": 65
+                }
+              }
+            },
+            {
+              "id": "VQOnW",
+              "type": "ref",
+              "ref": "d1nyW",
+              "width": "fill_container",
+              "name": "closingCard",
+              "padding": 32,
+              "fill": "$bg-surface",
+              "cornerRadius": "$radius-xl",
+              "descendants": {
+                "xB8M9": {
+                  "content": "Closing",
+                  "x": 32,
+                  "y": 32
+                },
+                "92vKL": {
+                  "content": "The goal isn't smarter AI — it's clearer workflows where human insight and machine speed work in tandem.",
+                  "width": "fill_container",
+                  "height": 81,
+                  "x": 32,
+                  "y": 65
+                }
+              }
+            },
+            {
+              "id": "z0BN4",
+              "type": "ref",
+              "ref": "0qcjX",
+              "width": "fill_container",
+              "name": "demoCta",
+              "padding": 64,
+              "descendants": {
+                "qArDz": {
+                  "content": "See Paper in action."
+                },
+                "89vyA": {
+                  "content": "Try the interactive demo to see how code, analysis, and writing come together."
+                },
+                "X1XXO/Hgugh": {
+                  "content": "View demo"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sOwHX",
+      "type": "ref",
+      "ref": "HiLQq",
+      "x": -165,
+      "y": 3275,
+      "fill": "#fafafaff",
+      "descendants": {
+        "0LlTm": {
+          "content": "Code Modules"
+        },
+        "CYvI8": {
+          "content": "Run simulations and analysis in-notebook. Switch between text and visual views for clearer model understanding."
+        },
+        "RkgwX": {
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/section-3/Feature-visualization.png",
+            "mode": "fill"
+          }
+        }
+      }
+    },
+    {
+      "id": "Z6YGY",
+      "type": "ref",
+      "ref": "HiLQq",
+      "x": 273,
+      "y": 3275,
+      "fill": "#fafafaff",
+      "descendants": {
+        "0LlTm": {
+          "content": "Code Modules"
+        },
+        "CYvI8": {
+          "content": "Run simulations and analysis in-notebook. Switch between text and visual views for clearer model understanding."
+        },
+        "RkgwX": {
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/section-3/Feature-visualization.png",
+            "mode": "fill"
+          }
+        }
+      }
+    },
+    {
+      "id": "iJ9n3",
+      "type": "ref",
+      "ref": "HiLQq",
+      "x": -626,
+      "y": 3275,
+      "fill": "#fafafaff",
+      "descendants": {
+        "0LlTm": {
+          "content": "Code Modules"
+        },
+        "CYvI8": {
+          "content": "Run simulations and analysis in-notebook. Switch between text and visual views for clearer model understanding."
+        },
+        "RkgwX": {
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/section-3/Feature-visualization.png",
+            "mode": "fill"
+          }
+        }
+      }
+    }
+  ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#2172AB"
+    },
+    "accent-bg": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#1A2172AB"
+        },
+        {
+          "value": "#2172AB1A"
+        }
+      ]
+    },
+    "accent-orange": {
+      "type": "color",
+      "value": "#EA7B48"
+    },
+    "bg-button-primary": {
+      "type": "color",
+      "value": "#0A0A0A"
+    },
+    "bg-button-secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#33E5E5E5"
+        },
+        {
+          "value": "#E5E5E533"
+        }
+      ]
+    },
+    "bg-cta-accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#142172AB"
+        },
+        {
+          "value": "#2172AB14"
+        }
+      ]
+    },
+    "bg-elevated": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "bg-page": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "bg-surface": {
+      "type": "color",
+      "value": "#FAFAFA"
+    },
+    "bg-surface-alt": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#80F2F2F5"
+        },
+        {
+          "value": "#F2F2F580"
+        }
+      ]
+    },
+    "border-default": {
+      "type": "color",
+      "value": "#EDEDED"
+    },
+    "brand-primary": {
+      "type": "color",
+      "value": "#0A0A0A"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-display": {
+      "type": "string",
+      "value": "Red Hat Display"
+    },
+    "link-color": {
+      "type": "color",
+      "value": "#2172AB"
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 16
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-pill": {
+      "type": "number",
+      "value": 20
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "radius-xl": {
+      "type": "number",
+      "value": 24
+    },
+    "text-onDark": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#0A0A0A"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#666666"
+    },
+    "text-tertiary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#99000000"
+        },
+        {
+          "value": "#00000099"
+        }
+      ]
+    }
+  }
+}

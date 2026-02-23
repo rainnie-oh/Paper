@@ -41,24 +41,27 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full relative">
-      {/* Outline Navigation Bar - Sticky */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <ul className="flex items-center justify-between md:justify-start md:gap-8 py-3 overflow-x-auto scrollbar-hide">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-xs uppercase tracking-widest whitespace-nowrap transition-all duration-200 px-2 py-1 ${activeSection === item.id
-                    ? 'text-black font-medium border-b-2 border-black'
-                    : 'text-paper-sub hover:text-black'
-                    }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
+      {/* Navigation Bar - Sticky */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-bg/90 backdrop-blur-lg">
+        <div className="max-w-screen-2xl mx-auto px-8 md:px-20 lg:px-32">
+          <div className="flex items-center justify-start py-4">
+            {/* Nav Items - Overlapping Pills */}
+            <ul className="flex items-center -space-x-1">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.id} className="relative">
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className={`text-[11px] md:text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 px-4 py-1.5 rounded-full relative ${activeSection === item.id
+                      ? 'bg-black text-white z-20'
+                      : 'text-paper-sub hover:text-black hover:bg-black/5 z-10'
+                      }`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
 

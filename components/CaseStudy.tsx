@@ -18,26 +18,26 @@ const CaseStudy: React.FC = () => {
       {/* 01. Hero Section */}
       <Section id="hero" className="min-h-[90vh] flex flex-col">
         {/* Top Row: Title/Tags (Left) | Project Cover (Right) */}
-        <Grid className="flex-1 items-center">
+        <Grid className="flex-1 items-start pt-8">
           {/* Left Column: Title + Tags */}
-          <div className="col-span-4 md:col-span-5 flex flex-col justify-center">
+          <div className="col-span-4 md:col-span-5 flex flex-col justify-start">
             <FadeIn delay={0.1}>
-              <Title className="mb-4">
+              <h1 className="font-display text-[48px] md:text-[64px] lg:text-[80px] leading-[0.95] tracking-tight font-semibold mb-6">
                 <a
                   href="https://www.orthogonal.dev/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline underline-offset-4 decoration-2"
+                  className="hover:underline underline-offset-8 decoration-2"
                 >
-                  Paper
+                  ODE-PAPER
                 </a>
-              </Title>
-              <Subheadline className="text-xl md:text-2xl mb-6 text-paper-sub">
+              </h1>
+              <Subheadline className="text-xl md:text-2xl mb-8 text-paper-sub">
                 AI Interactive Analysis Notebook for Engineers
               </Subheadline>
               <div className="flex gap-3">
-                <span className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1">Product Design</span>
-                <span className="text-xs uppercase tracking-widest border border-black/30 px-3 py-1">AI SaaS</span>
+                <span className="text-[11px] md:text-[12px] uppercase tracking-widest bg-black text-white px-4 py-2 font-medium rounded-full">Product Design</span>
+                <span className="text-[11px] md:text-[12px] uppercase tracking-widest border border-black/40 px-4 py-2 font-medium rounded-full">AI SaaS</span>
               </div>
             </FadeIn>
           </div>
@@ -45,19 +45,17 @@ const CaseStudy: React.FC = () => {
           {/* Right Column: Project Cover */}
           <div className="col-span-4 md:col-span-6 md:col-start-7">
             <FadeIn delay={0.2}>
-              <LaptopMockup>
-                <img
-                  src="/assets/images/hero/cover.png"
-                  alt="Paper - AI Interactive Analysis Notebook"
-                  className="w-full aspect-[16/10] object-cover"
-                />
-              </LaptopMockup>
+              <img
+                src="/assets/images/hero/cover.png"
+                alt="Paper - AI Interactive Analysis Notebook"
+                className="w-full object-cover rounded-lg"
+              />
             </FadeIn>
           </div>
         </Grid>
 
         {/* Bottom Row: One-liner (Left) | Key Info (Right) */}
-        <FadeIn delay={0.3} className="border-t border-black/10 pt-8 pb-4 mt-auto">
+        <FadeIn delay={0.3} className="border-t border-black/10 pt-8 pb-4 mt-12">
           <Grid>
             {/* One-liner */}
             <div className="col-span-4 md:col-span-5 mb-8 md:mb-0">
