@@ -1,7 +1,5 @@
 import React from 'react';
-import { Section, Grid, FadeIn } from './Layout';
-import { Title, Headline, Subheadline, Body, Label, Caption } from './Typography';
-import { RadialBurst, PlaceholderImage, LaptopMockup, WorkflowDiagram, SystemArchDiagram, Timeline, WorkshopWhiteboard, AiPrinciplesDiagram, AiMechanismFlow, EditorToViewerDiagram } from './Visuals';
+
 import { ProjectMeta } from '../types';
 
 const META_DATA: ProjectMeta = {
@@ -15,495 +13,389 @@ const CaseStudy: React.FC = () => {
   return (
     <div className="w-full bg-paper-bg selection:bg-paper-text selection:text-paper-bg relative">
 
-      {/* Sticky Table of Contents */}
-      <div className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-6 font-sans">
-        {/* Back Button */}
-        <a
-          href="https://ruiniohh.webflow.io/"
-          className="flex items-center gap-2 bg-white/70 backdrop-blur-xl px-4 py-2 rounded-full text-paper-sub hover:text-paper-text transition-colors shadow-sm"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-          <span className="text-sm font-medium">Back to Portfolio</span>
-        </a>
+      {/* 01. Hero Section */}
+      <div id="hero" className="w-full flex justify-center bg-paper-bg">
+        <div className="w-full max-w-[1440px] flex flex-col gap-8 md:gap-[48px] p-6 lg:p-[80px]">
 
-        {/* Nav Pill */}
-        <nav className="hidden md:flex items-center gap-8 bg-white/70 backdrop-blur-xl px-10 py-4 rounded-full text-[14px] shadow-sm">
-          <a href="#hero" className="text-paper-text font-medium hover:opacity-70 transition-opacity">Context</a>
-          <a href="#insights" className="text-paper-sub hover:text-paper-text transition-colors">Structure</a>
-          <a href="#modules" className="text-paper-sub hover:text-paper-text transition-colors">Modules</a>
-          <a href="#ai" className="text-paper-sub hover:text-paper-text transition-colors">AI</a>
-          <a href="#impact" className="text-paper-sub hover:text-paper-text transition-colors">Impact</a>
-        </nav>
+          {/* Hero Image */}
+          <div className="w-full h-auto md:h-[546px] rounded-2xl md:rounded-[16px] overflow-hidden bg-paper-bg">
+            <img src="/assets/images/hero/cover.png" alt="Hero Cover" className="w-full h-full object-cover" />
+          </div>
 
-        {/* Spacer for centering Pill */}
-        <div className="hidden md:block w-[180px]"></div>
+          {/* Hero Info */}
+          <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[72px]">
+
+            {/* Title */}
+            <div className="flex flex-col gap-4 md:gap-[16px] md:w-[380px] shrink-0">
+              <div className="flex flex-col">
+                <h1 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+                  ODE-Paper
+                </h1>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="font-display text-lg md:text-[18px] leading-snug md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-sub font-normal">
+                  Interactive Analysis Notebook for Engineers
+                </h2>
+              </div>
+            </div>
+
+            {/* Info Column */}
+            <div className="flex-1 flex flex-col gap-6 md:gap-[24px]">
+              <span className="font-sans text-sm md:text-[14px] font-medium leading-[1.5] text-paper-sub">
+                (brief)
+              </span>
+              <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-text">
+                Built 0→1 modular system unifying code, parameters, and visualization into dynamic documents.
+              </p>
+
+              <div className="hidden md:block w-full h-[1px] bg-black/[0.05]"></div>
+
+              {/* Meta Row */}
+              <div className="w-full grid grid-cols-2 md:flex justify-between gap-6 md:gap-4">
+                <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
+                  <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Timeline</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">2024.05–2024.12</span>
+                </div>
+                <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
+                  <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Tools</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">Figma, AI Studio</span>
+                </div>
+                <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
+                  <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Role</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">Product designer</span>
+                </div>
+                <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
+                  <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Status</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">In Beta</span>
+                </div>
+              </div>
+
+              <div className="w-full h-[1px] bg-black/[0.05]"></div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      {/* 01. Hero Section */}
-      <Section id="hero" className="min-h-[90vh] flex flex-col">
-        {/* Top Row: Title/Tags (Left) | Project Cover (Right) */}
-        <Grid className="flex-1 items-start pt-8">
-          {/* Left Column: Title + Tags */}
-          <div className="col-span-4 md:col-span-5 flex flex-col justify-start">
-            <FadeIn delay={0.1}>
-              <h1 className="font-display text-[48px] md:text-[64px] lg:text-[80px] leading-[0.95] tracking-tight font-semibold mb-6">
-                <a
-                  href="https://www.orthogonal.dev/home"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline underline-offset-8 decoration-2"
-                >
-                  ODE-PAPER
-                </a>
-              </h1>
-              <Subheadline className="text-xl md:text-2xl mb-8 text-paper-sub">
-                AI Interactive Analysis Notebook for Engineers
-              </Subheadline>
-              <div className="flex gap-3">
-                <span className="text-[11px] md:text-[12px] uppercase tracking-widest bg-black text-white px-4 py-2 font-medium rounded-full">Product Design</span>
-                <span className="text-[11px] md:text-[12px] uppercase tracking-widest border border-black/40 px-4 py-2 font-medium rounded-full">AI SaaS</span>
+
+
+      {/* Section 1: Pain Points */}
+      <div id="insights" className="w-full flex justify-center bg-white">
+        <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
+
+          {/* Section Heading */}
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full">
+            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+              Background
+            </h2>
+            <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-sub md:w-[455px]">
+              Engineers writing technical reports constantly switch between tools, leading to:
+            </p>
+          </div>
+
+          {/* Dual Column */}
+          <div className="w-full flex flex-col md:flex-row gap-12 md:gap-[66px] bg-[#FAFAFA] rounded-2xl md:rounded-[24px] p-8 md:p-[48px]">
+            {/* Frame 1 */}
+            <div className="flex flex-col gap-8 md:gap-[98px] md:w-[275px] shrink-0">
+              {/* Phase 1 */}
+              <div className="flex flex-col gap-4 md:gap-[16px]">
+                <div className="bg-[#EA7B48]/10 text-[#EA7B48] px-4 py-[6px] rounded-[8px] max-w-fit font-sans text-base md:text-[18px] font-medium leading-[1.5]">
+                  Authoring
+                </div>
+                <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
+                  The authoring process is fragmented across disconnected environments.
+                </p>
               </div>
-            </FadeIn>
-          </div>
 
-          {/* Right Column: Project Cover */}
-          <div className="col-span-4 md:col-span-6 md:col-start-7">
-            <FadeIn delay={0.2}>
-              <img
-                src="/assets/images/hero/cover.png"
-                alt="Paper - AI Interactive Analysis Notebook"
-                className="w-full object-cover rounded-lg"
-              />
-            </FadeIn>
-          </div>
-        </Grid>
-
-        {/* Bottom Row: One-liner (Left) | Key Info (Right) */}
-        <FadeIn delay={0.3} className="border-t border-black/10 pt-8 pb-4 mt-12">
-          <Grid>
-            {/* One-liner */}
-            <div className="col-span-4 md:col-span-5 mb-8 md:mb-0">
-              <Subheadline className="text-lg md:text-xl leading-relaxed">
-                Built 0-1 modular system unifying code, parameters, and visualization into dynamic documents.
-              </Subheadline>
-            </div>
-
-            {/* Key Info Grid */}
-            <div className="col-span-4 md:col-span-6 md:col-start-7">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                <div>
-                  <Label className="mb-1 text-paper-sub">Timeline</Label>
-                  <span className="text-sm font-medium">2024.05 – 2024.12</span>
+              {/* Phase 2 */}
+              <div className="flex flex-col gap-4 md:gap-[16px]">
+                <div className="bg-[#2172AB]/10 text-[#2172AB] px-4 py-[6px] rounded-[8px] max-w-fit font-sans text-base md:text-[18px] font-medium leading-[1.5]">
+                  Delivery
                 </div>
-                <div>
-                  <Label className="mb-1 text-paper-sub">Tools</Label>
-                  <span className="text-sm font-medium">Figma, Google AI Studio</span>
-                </div>
-                <div>
-                  <Label className="mb-1 text-paper-sub">My Role</Label>
-                  <span className="text-sm font-medium">Sole Product Designer</span>
-                  <p className="text-xs text-paper-sub mt-0.5">Full 0-1 Process</p>
-                </div>
-                <div>
-                  <Label className="mb-1 text-paper-sub">Status</Label>
-                  <span className="text-sm font-medium">Public Beta</span>
-                  <p className="text-xs text-paper-sub mt-0.5">Dec 2025</p>
-                </div>
+                <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
+                  When engineering papers can't be run, verified, or interacted with, they become black boxes.
+                </p>
               </div>
             </div>
-          </Grid>
-        </FadeIn>
-      </Section>
 
-
-
-      {/* Section 1: User Pain Points & Insights */}
-      <Section id="insights" className="bg-[#E5E4DE] border-t border-paper-text/5">
-        <Grid>
-          <div className="col-span-4 md:col-span-12 mb-8">
-            <FadeIn>
-              <Headline className="text-3xl md:text-4xl">User Pain Points & Insights</Headline>
-            </FadeIn>
+            {/* Illustration */}
+            <div className="flex-1 rounded-lg md:rounded-[8px] overflow-hidden min-h-[250px] md:h-[365px]">
+              <img src="/assets/images/section-1/painpoint.png" alt="Painpoints Visual" className="w-full h-full object-cover" />
+            </div>
           </div>
 
-          {/* Two-Phase Layout: Phase 1 | Arrow | Phase 2 */}
-          <div className="col-span-4 md:col-span-12">
-            <FadeIn delay={0.1}>
-              <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-0 mb-12">
-                {/* Phase 1: Authoring */}
-                <div className="flex-1 bg-white p-8 border border-black/10">
-                  <Label className="mb-3 text-black">Phase 1: Authoring</Label>
-                  <p className="text-base leading-relaxed mb-6">
-                    Engineers constantly jump between tools—MATLAB for analysis, Overleaf for writing, manually copy-pasting results.
-                  </p>
-                  <PlaceholderImage label="Authoring Workflow Visual" aspect="aspect-[4/3]" />
-                </div>
+          {/* Callout */}
+          <div className="w-full flex flex-col gap-4 md:gap-[16px] bg-[#FAFAFA] rounded-2xl md:rounded-[24px] p-8 md:p-[64px]">
+            <h3 className="font-display text-[32px] font-bold text-paper-text leading-tight">
+              Paper's solution
+            </h3>
+            <p className="font-sans text-[20px] font-normal leading-relaxed md:leading-[1.6] text-paper-sub">
+              Unified environment where writing = analysis = presentation. What's delivered isn't a static report, but an explorable, reproducible interactive document.
+            </p>
+          </div>
+        </div>
+      </div>
 
-                {/* Arrow Connector */}
-                <div className="hidden md:flex items-center justify-center px-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-12 h-px bg-black/30"></div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-black/50">
-                      <path d="M 6 4 L 10 8 L 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="md:hidden flex justify-center py-2">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-black/30 rotate-90">
-                    <path d="M 6 4 L 10 8 L 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Section 2: Module Foundation */}
+      <div id="definition" className="w-full flex justify-center bg-white">
+        <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
+
+          {/* Section Heading */}
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full">
+            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+              Product defining
+            </h2>
+            <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-sub md:w-[455px]">
+              To define the product scope and clarify core requirements, I organized a workshop with the team using physical cards to simulate real user workflows.
+            </p>
+          </div>
+
+          {/* Media */}
+          <div className="w-full rounded-2xl md:rounded-[16px] h-[300px] md:h-[520px] overflow-hidden">
+            <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Core Insights */}
+          <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[40px]">
+            {/* Insight 1 */}
+            <div className="flex-1 flex flex-col gap-3 md:gap-[12px] p-6 md:p-[32px] bg-[#FAFAFA] rounded-2xl md:rounded-[24px]">
+              <h4 className="font-display text-2xl md:text-[28px] font-normal leading-tight md:leading-[1.2] tracking-tight md:tracking-[-0.4px] text-paper-text">
+                Users need to reference data from multiple sources.
+              </h4>
+              <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
+                Engineers pull data from different places — models from ODE simulation apps, code, external table files — and combine them into analysis workflows.
+              </p>
+            </div>
+
+            {/* Insight 2 */}
+            <div className="flex-1 flex flex-col gap-3 md:gap-[12px] p-6 md:p-[32px] bg-[#FAFAFA] rounded-2xl md:rounded-[24px]">
+              <h4 className="font-display text-2xl md:text-[28px] font-normal leading-tight md:leading-[1.2] tracking-tight md:tracking-[-0.4px] text-paper-text">
+                Connecting analysis components is critical.
+              </h4>
+              <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
+                The value lies in traceability. Changing a parameter should automatically update the referencing code and downstream plots.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* Section 3: Interaction Design */}
+      <div id="modules" className="w-full flex justify-center bg-white">
+        <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
+          {/* Heading */}
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
+            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+              Highlights
+            </h2>
+          </div>
+
+          {/* Grid setup */}
+          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[24px] pt-4 md:pt-[16px]">
+            {/* Card 1 */}
+            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+              <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
+                {/* Icon */}
+                <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-paper-text">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
                   </svg>
                 </div>
-
-                {/* Phase 2: Delivery */}
-                <div className="flex-1 bg-white p-8 border border-black/10">
-                  <Label className="mb-3 text-black">Phase 2: Delivery</Label>
-                  <p className="text-base leading-relaxed mb-6">
-                    When engineering papers can't be run, verified, or interacted with, they become black boxes.
-                  </p>
-                  <PlaceholderImage label="Delivery Problem Visual" aspect="aspect-[4/3]" />
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-
-          {/* Paper's Solution - Centered below, converging the two phases */}
-          <div className="col-span-4 md:col-span-12">
-            <FadeIn delay={0.2}>
-              {/* Visual Connector from both phases */}
-              <div className="flex justify-center mb-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-[2px] h-16 bg-black/10"></div>
-                </div>
-              </div>
-
-              {/* Solution Card */}
-              <div className="max-w-3xl mx-auto text-center bg-paper-bg border border-black/5 rounded-3xl p-12 md:p-16 shadow-sm">
-                <Label className="mb-4 text-paper-sub">Paper's Solution</Label>
-                <p className="text-2xl md:text-3xl font-display font-medium leading-relaxed mb-4 text-paper-text">
-                  Unified environment where <strong>writing = analysis = presentation</strong>.
-                </p>
-                <p className="text-base text-paper-sub leading-relaxed">
-                  What's delivered isn't a static report, but an explorable, reproducible interactive document.
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">
+                  General Module Behaviors
+                </h4>
+                <p className="font-sans text-sm md:text-[14.5px] font-medium leading-relaxed md:leading-[1.448] text-paper-sub">
+                  All modules share consistent behaviors for fast editing and connect through parent-child binding for data traceability.
                 </p>
               </div>
-            </FadeIn>
-          </div>
-        </Grid>
-      </Section>
-
-
-      {/* Section 2: Module-Product Foundation */}
-      <Section id="definition" className="bg-white border-t border-paper-text/5">
-        <Grid>
-          {/* Header */}
-          <div className="col-span-4 md:col-span-12 mb-12">
-            <FadeIn>
-              <Headline>Module-Product Foundation</Headline>
-            </FadeIn>
-          </div>
-
-          {/* Challenge + Workshop Row */}
-          <div className="col-span-4 md:col-span-5 mb-12">
-            <FadeIn delay={0.1}>
-              <Subheadline className="mb-4">Challenge</Subheadline>
-              <Body className="mb-10">
-                Received a vague brief—"Build a computational document editor."
-              </Body>
-
-              <Subheadline className="mb-4">Workshop Approach</Subheadline>
-              <Body>
-                Used physical cards to simulate real scenarios with the team: import model → run analysis → generate charts → write conclusions.
-              </Body>
-            </FadeIn>
-          </div>
-
-          {/* Workshop Photo */}
-          <div className="col-span-4 md:col-span-12 mb-12">
-            <FadeIn delay={0.2}>
-              <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session using physical cards" className="w-full max-h-[600px] object-cover rounded-2xl shadow-sm border border-black/5" />
-              <Caption className="mt-6 text-center text-paper-sub">Workshop sessions using physical cards to map user workflows.</Caption>
-            </FadeIn>
-          </div>
-        </Grid>
-      </Section>
-
-      {/* Section 2 Part 2: Core Insights */}
-      <Section id="system" className="bg-[#F5F5F3] border-t border-paper-text/5 py-12 md:py-16">
-        <Grid>
-          {/* Left: Insight Cards (stacked) */}
-          <div className="col-span-4 md:col-span-4">
-            <FadeIn>
-              <Subheadline className="mb-6">Core Insights</Subheadline>
-
-              {/* Insight 1 */}
-              <div className="flex gap-4 items-start mb-6">
-                <div className="mt-1 p-2 bg-paper-bg rounded-lg border border-black/5">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sub"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                </div>
-                <div>
-                  <h4 className="font-display text-[16px] font-medium leading-snug mb-2 text-paper-text">Users need to reference data from multiple sources</h4>
-                  <p className="text-[13px] text-paper-sub leading-relaxed">
-                    Modular system: Code, Text, Table, Plot modules assembled like building blocks.
-                  </p>
+              <div className="p-2 md:p-[8px] pt-0">
+                <div className="w-full h-auto md:h-[295.5px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+                  <img src="/assets/images/section-3/Feature-general.png" alt="General Behaviors" className="w-full h-full object-cover" />
                 </div>
               </div>
+            </div>
 
-              {/* Insight 2 */}
-              <div className="flex gap-4 items-start">
-                <div className="mt-1 p-2 bg-paper-bg rounded-lg border border-black/5">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sub"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="3" y="12" width="18" height="9" rx="2" ry="2"></rect><rect x="12" y="3" width="9" height="18" rx="2" ry="2"></rect></svg>
+            {/* Card 2 */}
+            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+              <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
+                {/* Icon */}
+                <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-paper-text">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
                 </div>
-                <div>
-                  <h4 className="font-display text-[16px] font-medium leading-snug mb-2 text-paper-text">Module relationships determine data flow</h4>
-                  <p className="text-[13px] text-paper-sub leading-relaxed">
-                    Parent-child relationships: When a parent updates, children auto-refresh.
-                  </p>
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">
+                  Code Modules
+                </h4>
+                <p className="font-sans text-sm md:text-[14.5px] font-medium leading-relaxed md:leading-[1.448] text-paper-sub">
+                  Run simulations and analysis in-notebook. Switch between text and visual views for clearer model understanding.
+                </p>
+              </div>
+              <div className="p-2 md:p-[8px] pt-0">
+                <div className="w-full h-auto md:h-[264px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+                  <img src="/assets/images/section-3/Feature-code.png" alt="Code Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
-            </FadeIn>
-          </div>
+            </div>
 
-          {/* Right: Module Diagram */}
-          <div className="col-span-4 md:col-span-8 mt-8 md:mt-0">
-            <FadeIn delay={0.1}>
-              <div className="bg-white p-5 border border-black/5 h-full">
-                <div className="flex justify-between items-center mb-4">
-                  <Label className="text-black">Module System Architecture</Label>
-                  <span className="text-[11px] text-paper-sub">6 types + I/O rules</span>
+            {/* Card 3 */}
+            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+              <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
+                {/* Icon */}
+                <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-paper-text">
+                    <path d="M3 3v18h18"></path>
+                    <path d="M18 17V9"></path>
+                    <path d="M13 17V5"></path>
+                    <path d="M8 17v-3"></path>
+                  </svg>
                 </div>
-                <PlaceholderImage label="Module Diagram (6 types + connections + parent-child linking)" aspect="aspect-[16/9]" />
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">
+                  Visualization Modules
+                </h4>
+                <p className="font-sans text-sm md:text-[14.5px] font-medium leading-relaxed md:leading-[1.448] text-paper-sub">
+                  Inspect and validate results in Table. Explore patterns and comparisons in Plot. Switch views while keeping the same data source connected.
+                </p>
               </div>
-            </FadeIn>
-          </div>
-        </Grid>
-      </Section>
-
-
-
-      {/* Section 3: Interaction & Component Design */}
-      <Section className="bg-white border-t border-paper-text/5 py-12 md:py-16">
-        <Grid>
-          {/* Header */}
-          <div className="col-span-4 md:col-span-12 mb-10">
-            <FadeIn>
-              <Headline>Interaction & Component Design</Headline>
-            </FadeIn>
-          </div>
-
-          {/* General Module Capabilities */}
-          <div className="col-span-4 md:col-span-12 mb-10">
-            <FadeIn delay={0.1}>
-              <div className="bg-[#F5F5F3] p-8 border border-black/5 rounded-3xl flex flex-col md:flex-row gap-8 items-center">
-                <div className="md:w-1/2">
-                  <Subheadline className="mb-4 text-[20px]">General Module Capabilities</Subheadline>
-                  <div className="space-y-4">
-                    <Body className="text-paper-sub leading-relaxed text-[15px]">
-                      All modules share unified behaviors: <strong className="text-paper-text font-medium">drag to reposition, resize, slash-command insertion</strong>.
-                    </Body>
-                    <Body className="text-paper-sub leading-relaxed text-[15px]">
-                      <strong className="text-paper-text font-medium">Parent-child relationships:</strong> Modules bind to data sources for data traceability and automatic updates.
-                    </Body>
-                  </div>
-                </div>
-                <div className="md:w-1/2 w-full">
-                  <img src="/assets/images/section-3/Feature-general.png" alt="General Module Features" className="w-full h-auto rounded-xl shadow-sm border border-black/5 bg-white" />
+              <div className="p-2 md:p-[8px] pt-0">
+                <div className="w-full h-auto md:h-[264px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+                  <img src="/assets/images/section-3/Feature-visualization.png" alt="Visualization Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
-            </FadeIn>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      {/* Section 4: AI Integration */}
+      <div id="ai" className="w-full flex justify-center bg-white border-t border-black/5">
+        <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
+
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
+            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+              What's AI's role in Paper?
+            </h2>
           </div>
 
-          {/* Code Module */}
-          <div className="col-span-4 md:col-span-6 mb-8">
-            <FadeIn delay={0.2} className="h-full">
-              <div className="border border-black/5 h-full rounded-3xl overflow-hidden bg-white shadow-sm flex flex-col">
-                <div className="p-6 md:p-8 border-b border-black/5 bg-[#F5F5F3]">
-                  <Label className="mb-3 text-paper-text font-bold text-[14px]">Code Module</Label>
-                  <p className="text-[15px] leading-relaxed text-paper-sub">
-                    Dual-view switching (code ⇄ diagram) + upstream data binding capability.
-                  </p>
-                </div>
-                <div className="p-8 flex-1 flex items-center justify-center bg-paper-bg">
-                  <img src="/assets/images/section-3/Feature-code.png" alt="Code Module UI" className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-sm border border-black/5" />
-                </div>
+          {/* AI Definition Callout */}
+          <div className="w-full bg-[#FAFAFA] rounded-2xl md:rounded-[24px] p-8 md:p-[64px] flex flex-col md:flex-row gap-8 md:gap-[48px] justify-between items-start">
+            <div>
+              <svg width="64" height="64" viewBox="0 0 141 141" fill="none" className="text-[#EA7B48]">
+                <path d="M23.381 12.814l1.32-0.91c5.1-3.521 5.778-4.003 6.455-4.482l3.366 4.762c-0.706 0.5-1.41 0.997-6.51 4.518l-2.209 1.523 9.397 5.707-3.025 4.984-8.794-5.34 0 12.012-5.83 0 0-11.663c-4.23 2.919-9.045 6.242-13.942 9.628l-3.315-4.795c5.228-3.616 10.364-7.16 14.792-10.216l-15.086-9.161 1.513-2.492 1.514-2.491 14.523 8.817 0-13.215 5.831 0 0 12.814z" fill="currentColor" />
+              </svg>
+            </div>
+            <p className="font-display text-4xl md:text-[52px] font-normal leading-tight md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-text md:w-[825px]">
+              AI shouldn't be a general chatbot — it should be a collaborator embedded in the workflow.
+            </p>
+          </div>
+
+          {/* Mechanisms */}
+          <div className="w-full flex flex-col gap-8 md:gap-[48px]">
+
+            {/* Mech 1 */}
+            <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[48px] items-center">
+              <div className="flex-1 bg-white rounded-2xl md:rounded-[16px] p-4 md:p-[24px]">
+                <img src="/assets/images/section-4/Demo-1.gif" alt="Context-aware generation" className="w-full h-auto rounded-lg" />
               </div>
-            </FadeIn>
-          </div>
-
-          {/* Visualization Modules */}
-          <div className="col-span-4 md:col-span-6 mb-8">
-            <FadeIn delay={0.3} className="h-full">
-              <div className="border border-black/5 h-full rounded-3xl overflow-hidden bg-white shadow-sm flex flex-col">
-                <div className="p-6 md:p-8 border-b border-black/5 bg-[#F5F5F3]">
-                  <Label className="mb-3 text-paper-text font-bold text-[14px]">Visualization Modules</Label>
-                  <p className="text-[15px] leading-relaxed text-paper-sub">
-                    Table and Plot can switch views within the same module while preserving data source.
-                  </p>
-                </div>
-                <div className="p-8 flex-1 flex items-center justify-center bg-paper-bg">
-                  <img src="/assets/images/section-3/Feature-visualization.png" alt="Visualization Modules UI" className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-sm border border-black/5" />
-                </div>
+              <div className="md:w-[400px] flex flex-col gap-4">
+                <h4 className="font-display text-2xl md:text-[28px] font-bold text-paper-text">AI Integration in Outline</h4>
+                <p className="font-sans text-base leading-relaxed text-paper-sub">
+                  Trigger AI from the Outline while browsing. Call out a specific module and run targeted "Suggest" commands in context.
+                </p>
               </div>
-            </FadeIn>
-          </div>
-        </Grid>
-      </Section>
+            </div>
 
-
-      {/* Section 4: AI + Module-based */}
-      <Section id="ai" className="bg-[#E5E4DE] border-t border-paper-text/5 py-12 md:py-16">
-        <Grid>
-          {/* Header + Opportunity */}
-          <div className="col-span-4 md:col-span-12 mb-10">
-            <FadeIn>
-              <Headline className="mb-6">AI + Module-based</Headline>
-
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="md:w-1/2">
-                  <Body className="text-[16px] leading-relaxed mb-4 text-paper-text">
-                    With modular structure and parent-child relationships in place, AI can understand complete workflows. This enables AI to accelerate analysis.
-                  </Body>
+            {/* Mech Row (2 and 3) */}
+            <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[48px]">
+              {/* Mech 2 */}
+              <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
+                <div className="w-full h-[260px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
+                  <img src="/assets/images/section-4/Demo-2.gif" alt="AI Assistance in Code Module" className="w-full h-full object-cover" />
                 </div>
-
-                {/* Embedded Concept Statement */}
-                <div className="md:w-1/2">
-                  <div className="bg-white/60 p-6 md:p-8 border border-black/5 rounded-2xl flex gap-4 items-start shadow-sm">
-                    <div className="p-2 bg-white rounded-lg mt-1 border border-black/5">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-black"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    </div>
-                    <div>
-                      <p className="text-[16px] font-medium leading-relaxed font-display text-paper-text">
-                        Definition: <strong>AI shouldn't be a general chatbot</strong> but a <strong>collaborator embedded in the workflow</strong>.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <h4 className="font-display text-2xl md:text-[24px] font-bold text-paper-text">AI Assistance in Code Module</h4>
+                <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
+                  Generate runnable code directly inside Code modules. Also supports quick edits like fixing errors and refactoring.
+                </p>
               </div>
-            </FadeIn>
-          </div>
 
-          {/* Mechanisms as an Asymmetric Grid */}
-          <div className="col-span-4 md:col-span-12">
-            <FadeIn delay={0.1}>
-              <Subheadline className="mb-6 hidden">Core Mechanisms & Principles</Subheadline>
-              <div className="flex flex-col gap-6">
-
-                {/* 1. Full-Width Featured Card */}
-                <div className="bg-white rounded-[24px] border border-black/5 p-6 md:p-10 flex flex-col md:flex-row items-center gap-10 shadow-sm">
-                  <div className="md:w-1/3">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-5 border border-black/5">
-                      <span className="w-2 h-2 rounded-full bg-paper-text"></span>
-                      <span className="text-[13px] font-medium text-paper-sub">Principle 1</span>
-                    </div>
-                    <h4 className="font-display text-[26px] font-bold text-paper-text mb-4">Context-aware generation</h4>
-                    <p className="text-[15px] text-paper-sub leading-relaxed">
-                      AI understands the structure of your document, including data sources and relationships, generating highly relevant insights and code specifically tailored to the current analytical state.
-                    </p>
-                  </div>
-                  <div className="md:w-2/3 w-full h-[320px] md:h-[420px] bg-paper-bg rounded-[16px] overflow-hidden border border-black/5 shadow-inner relative">
-                    <img src="/assets/images/section-4/Demo-1.gif" alt="Context-aware generation" className="w-full h-full object-cover" />
-                  </div>
+              {/* Mech 3 */}
+              <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
+                <div className="w-full h-[260px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
+                  <img src="/assets/images/section-4/Demo-3.gif" alt="Quick Add Modules for Next Step" className="w-full h-full object-cover" />
                 </div>
-
-                {/* Split Row for 2 and 3 */}
-                <div className="flex flex-col md:flex-row gap-6">
-                  {/* 2. Half-Width Card */}
-                  <div className="flex-1 bg-white rounded-[24px] border border-black/5 p-6 shadow-sm flex flex-col">
-                    <div className="w-full h-[260px] bg-paper-bg rounded-[16px] mb-8 overflow-hidden border border-black/5 shadow-inner">
-                      <img src="/assets/images/section-4/Demo-2.gif" alt="Dual entry points" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="px-2">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-4 border border-black/5">
-                        <span className="w-2 h-2 rounded-full bg-paper-text"></span>
-                        <span className="text-[13px] font-medium text-paper-sub">Principle 2</span>
-                      </div>
-                      <h4 className="font-display text-[22px] font-bold text-paper-text mb-3">Dual entry points</h4>
-                      <p className="text-[15px] text-paper-sub leading-relaxed">
-                        Quick Add to generate new modules based on existing results, or In-module invoke to refine current content. Both show previews before acceptance.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* 3. Half-Width Card */}
-                  <div className="flex-1 bg-white rounded-[24px] border border-black/5 p-6 shadow-sm flex flex-col">
-                    <div className="w-full h-[260px] bg-paper-bg rounded-[16px] mb-8 overflow-hidden border border-black/5 shadow-inner">
-                      <img src="/assets/images/section-4/Demo-3.gif" alt="Transparent provenance" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="px-2">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-4 border border-black/5">
-                        <span className="w-2 h-2 rounded-full bg-paper-text"></span>
-                        <span className="text-[13px] font-medium text-paper-sub">Principle 3</span>
-                      </div>
-                      <h4 className="font-display text-[22px] font-bold text-paper-text mb-3">Transparent provenance</h4>
-                      <p className="text-[15px] text-paper-sub leading-relaxed">
-                        Every AI-generated output explicitly displays its data source and reasoning path—building trust and enabling technical verification.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
+                <h4 className="font-display text-2xl md:text-[24px] font-bold text-paper-text">Quick Add Modules for Next Step</h4>
+                <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
+                  From a current result, ask a question and instantly add the next module to continue the analysis.
+                </p>
               </div>
-            </FadeIn>
+            </div>
+
           </div>
-        </Grid>
-      </Section>
+        </div>
+      </div>
 
+      {/* Section 5: Impact */}
+      <div id="impact" className="w-full flex justify-center bg-white border-t border-black/5">
+        <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
 
-      {/* Section 5: Impact & Future Directions */}
-      <Section id="impact" className="bg-white py-16 md:py-24">
-        <Grid>
-          <div className="col-span-4 md:col-span-12 mb-12">
-            <FadeIn>
-              <Headline>Impact & Future Directions</Headline>
-            </FadeIn>
+          {/* Heading */}
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
+            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+              Impact & future directions
+            </h2>
+            <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] text-paper-sub">
+              Launched public beta December 2025.
+            </p>
           </div>
 
-          {/* Left Column: Impact Narrative + Institutional Adoption */}
-          <div className="col-span-4 md:col-span-6 flex flex-col gap-10">
-            <FadeIn delay={0.1}>
+          {/* Impact Split */}
+          <div className="w-full flex flex-col md:flex-row gap-12 md:gap-[64px]">
+
+            {/* Left Column */}
+            <div className="flex-1 flex flex-col gap-6 md:gap-[24px]">
               <div>
-                <Subheadline className="mb-5">Real-World Impact</Subheadline>
-                <div className="text-[16px] mb-8 leading-relaxed text-paper-sub space-y-4">
-                  <p>
-                    Launched in public beta in December 2025, Paper quickly proved its value. By accelerating the transition from raw analytical data to cohesive, readable reports, we've welcomed early adopters and "ODE Believers" from leading research institutions spanning the globe.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">German Aerospace Center</span>
-                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">Rensselaer Polytechnic</span>
-                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">Technical University of Munich</span>
-                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">LTX Simulation GmbH</span>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-
-          {/* Right Column: Next Steps & Closing */}
-          <div className="col-span-4 md:col-span-5 md:col-start-8">
-            <FadeIn delay={0.2} className="h-full flex flex-col justify-between">
-              <div className="mb-12">
-                <Subheadline className="mb-5">Next Step</Subheadline>
-                <div className="p-8 bg-paper-bg rounded-2xl border border-black/5 shadow-sm">
-                  <p className="text-[15px] leading-relaxed text-paper-text">
-                    <strong>Viewer-side AI integration:</strong> enabling readers to dynamically ask questions, manipulate parameters, and explore analytical results interactively directly from the published document.
-                  </p>
-                </div>
-              </div>
-
-              {/* Closing Statement */}
-              <div className="border-l-4 border-black/10 pl-6 py-2 mt-auto">
-                <p className="text-xl md:text-[24px] font-serif italic text-paper-text/80 leading-snug">
-                  "The goal isn't smarter AI—it's clearer workflows where human insight and machine speed work in tandem."
+                <h4 className="font-sans text-sm md:text-[14px] font-bold text-paper-text uppercase tracking-wider mb-2">Impact</h4>
+                <p className="font-sans text-base md:text-[16px] leading-relaxed text-paper-sub">
+                  Launched public beta December 2025. Since then, we've welcomed ODE Believers from institutions including:
                 </p>
               </div>
-            </FadeIn>
-          </div>
-        </Grid>
-      </Section>
+              {/* Institution Pills */}
+              <div className="flex flex-wrap gap-4">
+                <span className="px-4 py-2 border border-[#CCCCCC] rounded-full text-sm font-sans text-paper-text">German Aerospace Center</span>
+                <span className="px-4 py-2 border border-[#CCCCCC] rounded-full text-sm font-sans text-paper-text">Rensselaer Polytechnic Institute</span>
+                <span className="px-4 py-2 border border-[#CCCCCC] rounded-full text-sm font-sans text-paper-text">TU Munich</span>
+                <span className="px-4 py-2 border border-[#CCCCCC] rounded-full text-sm font-sans text-paper-text">LTX Simulation</span>
+              </div>
+            </div>
 
+            {/* Right Column */}
+            <div className="flex-1 flex flex-col gap-6 md:gap-[24px]">
+              <div>
+                <h4 className="font-sans text-sm md:text-[14px] font-bold text-paper-text uppercase tracking-wider mb-2">Next step</h4>
+                <p className="font-sans text-base md:text-[16px] leading-relaxed text-paper-sub">
+                  Viewer-side AI: enabling readers to ask questions and explore results interactively — turning static consumption into active investigation.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Closing Card */}
+          <div className="w-full border-t border-[#CCCCCC] pt-8 mt-8">
+            <p className="font-display text-3xl md:text-[36px] font-medium italic text-paper-text text-left">
+              "The goal isn't smarter AI — it's clearer workflows where human insight and machine speed work in tandem."
+            </p>
+          </div>
+
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="w-full bg-paper-bg pb-12 pt-24 px-6 md:px-12">

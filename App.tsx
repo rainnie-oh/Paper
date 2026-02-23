@@ -44,7 +44,19 @@ const App: React.FC = () => {
       {/* Navigation Bar - Sticky */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-bg/90 backdrop-blur-lg">
         <div className="max-w-screen-2xl mx-auto px-8 md:px-20 lg:px-32">
-          <div className="flex items-center justify-start py-4">
+          <div className="flex items-center justify-between py-4">
+            {/* Back Button */}
+            <a
+              href="https://ruiniohh.webflow.io/"
+              className="flex items-center gap-2 text-paper-sub hover:text-black transition-colors"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span className="text-[11px] md:text-xs uppercase tracking-wider font-medium">Portfolio</span>
+            </a>
+
             {/* Nav Items - Overlapping Pills */}
             <ul className="flex items-center -space-x-1">
               {NAV_ITEMS.map((item) => (
