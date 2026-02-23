@@ -60,7 +60,7 @@ const CaseStudy: React.FC = () => {
               <div className="w-full grid grid-cols-2 md:flex justify-between gap-6 md:gap-4">
                 <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Timeline</span>
-                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">2024.05–2024.12</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">2025.05–2025.12</span>
                 </div>
                 <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Tools</span>
