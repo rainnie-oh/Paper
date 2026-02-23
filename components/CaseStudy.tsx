@@ -13,7 +13,34 @@ const META_DATA: ProjectMeta = {
 
 const CaseStudy: React.FC = () => {
   return (
-    <div className="w-full bg-paper-bg selection:bg-paper-text selection:text-paper-bg">
+    <div className="w-full bg-paper-bg selection:bg-paper-text selection:text-paper-bg relative">
+
+      {/* Sticky Table of Contents */}
+      <div className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-6 font-sans">
+        {/* Back Button */}
+        <a
+          href="https://ruiniohh.webflow.io/"
+          className="flex items-center gap-2 bg-white/70 backdrop-blur-xl px-4 py-2 rounded-full text-paper-sub hover:text-paper-text transition-colors shadow-sm"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span className="text-sm font-medium">Back to Portfolio</span>
+        </a>
+
+        {/* Nav Pill */}
+        <nav className="hidden md:flex items-center gap-8 bg-white/70 backdrop-blur-xl px-10 py-4 rounded-full text-[14px] shadow-sm">
+          <a href="#hero" className="text-paper-text font-medium hover:opacity-70 transition-opacity">Context</a>
+          <a href="#insights" className="text-paper-sub hover:text-paper-text transition-colors">Structure</a>
+          <a href="#modules" className="text-paper-sub hover:text-paper-text transition-colors">Modules</a>
+          <a href="#ai" className="text-paper-sub hover:text-paper-text transition-colors">AI</a>
+          <a href="#impact" className="text-paper-sub hover:text-paper-text transition-colors">Impact</a>
+        </nav>
+
+        {/* Spacer for centering Pill */}
+        <div className="hidden md:block w-[180px]"></div>
+      </div>
 
       {/* 01. Hero Section */}
       <Section id="hero" className="min-h-[90vh] flex flex-col">
@@ -148,18 +175,17 @@ const CaseStudy: React.FC = () => {
               {/* Visual Connector from both phases */}
               <div className="flex justify-center mb-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-px h-8 bg-black/20"></div>
-                  <div className="w-3 h-3 border-2 border-black/30 rounded-full bg-paper-bg"></div>
+                  <div className="w-[2px] h-16 bg-black/10"></div>
                 </div>
               </div>
 
               {/* Solution Card */}
-              <div className="max-w-2xl mx-auto text-center bg-black text-white p-10">
-                <Label className="mb-4 text-white/60">Paper's Solution</Label>
-                <p className="text-xl md:text-2xl font-medium leading-relaxed mb-4">
+              <div className="max-w-3xl mx-auto text-center bg-paper-bg border border-black/5 rounded-3xl p-12 md:p-16 shadow-sm">
+                <Label className="mb-4 text-paper-sub">Paper's Solution</Label>
+                <p className="text-2xl md:text-3xl font-display font-medium leading-relaxed mb-4 text-paper-text">
                   Unified environment where <strong>writing = analysis = presentation</strong>.
                 </p>
-                <p className="text-sm text-white/70">
+                <p className="text-base text-paper-sub leading-relaxed">
                   What's delivered isn't a static report, but an explorable, reproducible interactive document.
                 </p>
               </div>
@@ -194,11 +220,11 @@ const CaseStudy: React.FC = () => {
             </FadeIn>
           </div>
 
-          {/* Workshop Photo Placeholder */}
-          <div className="col-span-4 md:col-span-6 md:col-start-7 mb-12">
+          {/* Workshop Photo */}
+          <div className="col-span-4 md:col-span-12 mb-12">
             <FadeIn delay={0.2}>
-              <PlaceholderImage label="Workshop Photo (Card Scenario Simulation)" aspect="aspect-[4/3]" />
-              <Caption>Workshop sessions using physical cards to map user workflows.</Caption>
+              <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session using physical cards" className="w-full max-h-[600px] object-cover rounded-2xl shadow-sm border border-black/5" />
+              <Caption className="mt-6 text-center text-paper-sub">Workshop sessions using physical cards to map user workflows.</Caption>
             </FadeIn>
           </div>
         </Grid>
@@ -213,21 +239,29 @@ const CaseStudy: React.FC = () => {
               <Subheadline className="mb-6">Core Insights</Subheadline>
 
               {/* Insight 1 */}
-              <div className="bg-white p-5 border border-black/5 mb-4">
-                <Label className="mb-2 text-black">Insight 1</Label>
-                <p className="font-display text-[15px] font-medium leading-snug mb-3">Users need to reference data from multiple sources</p>
-                <p className="text-[13px] text-paper-sub leading-relaxed">
-                  Modular system: Code, Text, Table, Plot modules assembled like building blocks.
-                </p>
+              <div className="flex gap-4 items-start mb-6">
+                <div className="mt-1 p-2 bg-paper-bg rounded-lg border border-black/5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sub"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-[16px] font-medium leading-snug mb-2 text-paper-text">Users need to reference data from multiple sources</h4>
+                  <p className="text-[13px] text-paper-sub leading-relaxed">
+                    Modular system: Code, Text, Table, Plot modules assembled like building blocks.
+                  </p>
+                </div>
               </div>
 
               {/* Insight 2 */}
-              <div className="bg-white p-5 border border-black/5">
-                <Label className="mb-2 text-black">Insight 2</Label>
-                <p className="font-display text-[15px] font-medium leading-snug mb-3">Module relationships determine data flow</p>
-                <p className="text-[13px] text-paper-sub leading-relaxed">
-                  Parent-child relationships: When a parent updates, children auto-refresh.
-                </p>
+              <div className="flex gap-4 items-start">
+                <div className="mt-1 p-2 bg-paper-bg rounded-lg border border-black/5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sub"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="3" y="12" width="18" height="9" rx="2" ry="2"></rect><rect x="12" y="3" width="9" height="18" rx="2" ry="2"></rect></svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-[16px] font-medium leading-snug mb-2 text-paper-text">Module relationships determine data flow</h4>
+                  <p className="text-[13px] text-paper-sub leading-relaxed">
+                    Parent-child relationships: When a parent updates, children auto-refresh.
+                  </p>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -262,15 +296,20 @@ const CaseStudy: React.FC = () => {
           {/* General Module Capabilities */}
           <div className="col-span-4 md:col-span-12 mb-10">
             <FadeIn delay={0.1}>
-              <div className="bg-[#F5F5F3] p-6 border border-black/5">
-                <Subheadline className="mb-3">General Module Capabilities</Subheadline>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Body>
-                    All modules share unified behaviors: drag to reposition, resize, slash-command insertion.
-                  </Body>
-                  <Body>
-                    <strong>Parent-child relationships:</strong> Modules bind to data sources for data traceability and automatic updates.
-                  </Body>
+              <div className="bg-[#F5F5F3] p-8 border border-black/5 rounded-3xl flex flex-col md:flex-row gap-8 items-center">
+                <div className="md:w-1/2">
+                  <Subheadline className="mb-4 text-[20px]">General Module Capabilities</Subheadline>
+                  <div className="space-y-4">
+                    <Body className="text-paper-sub leading-relaxed text-[15px]">
+                      All modules share unified behaviors: <strong className="text-paper-text font-medium">drag to reposition, resize, slash-command insertion</strong>.
+                    </Body>
+                    <Body className="text-paper-sub leading-relaxed text-[15px]">
+                      <strong className="text-paper-text font-medium">Parent-child relationships:</strong> Modules bind to data sources for data traceability and automatic updates.
+                    </Body>
+                  </div>
+                </div>
+                <div className="md:w-1/2 w-full">
+                  <img src="/assets/images/section-3/Feature-general.png" alt="General Module Features" className="w-full h-auto rounded-xl shadow-sm border border-black/5 bg-white" />
                 </div>
               </div>
             </FadeIn>
@@ -278,30 +317,34 @@ const CaseStudy: React.FC = () => {
 
           {/* Code Module */}
           <div className="col-span-4 md:col-span-6 mb-8">
-            <FadeIn delay={0.2}>
-              <div className="border border-black/5 h-full">
-                <div className="p-5 border-b border-black/5">
-                  <Label className="mb-2 text-black">Code Module</Label>
-                  <p className="text-[14px] leading-relaxed">
+            <FadeIn delay={0.2} className="h-full">
+              <div className="border border-black/5 h-full rounded-3xl overflow-hidden bg-white shadow-sm flex flex-col">
+                <div className="p-6 md:p-8 border-b border-black/5 bg-[#F5F5F3]">
+                  <Label className="mb-3 text-paper-text font-bold text-[14px]">Code Module</Label>
+                  <p className="text-[15px] leading-relaxed text-paper-sub">
                     Dual-view switching (code ⇄ diagram) + upstream data binding capability.
                   </p>
                 </div>
-                <PlaceholderImage label="Code Module UI (code/diagram switch + binding)" aspect="aspect-[4/3]" />
+                <div className="p-8 flex-1 flex items-center justify-center bg-paper-bg">
+                  <img src="/assets/images/section-3/Feature-code.png" alt="Code Module UI" className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-sm border border-black/5" />
+                </div>
               </div>
             </FadeIn>
           </div>
 
           {/* Visualization Modules */}
           <div className="col-span-4 md:col-span-6 mb-8">
-            <FadeIn delay={0.3}>
-              <div className="border border-black/5 h-full">
-                <div className="p-5 border-b border-black/5">
-                  <Label className="mb-2 text-black">Visualization Modules</Label>
-                  <p className="text-[14px] leading-relaxed">
+            <FadeIn delay={0.3} className="h-full">
+              <div className="border border-black/5 h-full rounded-3xl overflow-hidden bg-white shadow-sm flex flex-col">
+                <div className="p-6 md:p-8 border-b border-black/5 bg-[#F5F5F3]">
+                  <Label className="mb-3 text-paper-text font-bold text-[14px]">Visualization Modules</Label>
+                  <p className="text-[15px] leading-relaxed text-paper-sub">
                     Table and Plot can switch views within the same module while preserving data source.
                   </p>
                 </div>
-                <PlaceholderImage label="Table/Plot Module UI (view switching)" aspect="aspect-[4/3]" />
+                <div className="p-8 flex-1 flex items-center justify-center bg-paper-bg">
+                  <img src="/assets/images/section-3/Feature-visualization.png" alt="Visualization Modules UI" className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-sm border border-black/5" />
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -310,90 +353,97 @@ const CaseStudy: React.FC = () => {
 
 
       {/* Section 4: AI + Module-based */}
-      <Section id="ai-design" className="bg-[#F5F5F3] border-t border-paper-text/5 py-12 md:py-16">
+      <Section id="ai" className="bg-[#E5E4DE] border-t border-paper-text/5 py-12 md:py-16">
         <Grid>
           {/* Header + Opportunity */}
           <div className="col-span-4 md:col-span-12 mb-10">
             <FadeIn>
               <Headline className="mb-6">AI + Module-based</Headline>
-              <div className="bg-white p-6 border border-black/5 max-w-3xl">
-                <Subheadline className="mb-3">Paper's Opportunity</Subheadline>
-                <Body className="mb-4">
-                  With modular structure and parent-child relationships in place, AI can understand complete workflows. This enables AI to accelerate analysis.
-                </Body>
-                <p className="text-[14px] font-medium border-t border-black/10 pt-4">
-                  Definition: <strong>AI shouldn't be a general chatbot</strong> but a <strong>collaborator embedded in the workflow</strong>.
-                </p>
+
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="md:w-1/2">
+                  <Body className="text-[16px] leading-relaxed mb-4 text-paper-text">
+                    With modular structure and parent-child relationships in place, AI can understand complete workflows. This enables AI to accelerate analysis.
+                  </Body>
+                </div>
+
+                {/* Embedded Concept Statement */}
+                <div className="md:w-1/2">
+                  <div className="bg-white/60 p-6 md:p-8 border border-black/5 rounded-2xl flex gap-4 items-start shadow-sm">
+                    <div className="p-2 bg-white rounded-lg mt-1 border border-black/5">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-black"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div>
+                      <p className="text-[16px] font-medium leading-relaxed font-display text-paper-text">
+                        Definition: <strong>AI shouldn't be a general chatbot</strong> but a <strong>collaborator embedded in the workflow</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </FadeIn>
           </div>
 
-          {/* Design Principles → Core Mechanisms (Connected Layout) */}
+          {/* Mechanisms as an Asymmetric Grid */}
           <div className="col-span-4 md:col-span-12">
             <FadeIn delay={0.1}>
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <Subheadline className="mb-6 hidden">Core Mechanisms & Principles</Subheadline>
+              <div className="flex flex-col gap-6">
 
-                {/* Left: Principles (Compact) */}
-                <div className="md:col-span-3">
-                  <Subheadline className="mb-4">Design Principles</Subheadline>
-                  <div className="space-y-3">
-                    <div className="bg-white p-4 border-l-2 border-black">
-                      <p className="text-[13px] font-medium">Context-aware</p>
-                      <p className="text-[12px] text-paper-sub mt-1">Understands modules, sources, relationships</p>
+                {/* 1. Full-Width Featured Card */}
+                <div className="bg-white rounded-[24px] border border-black/5 p-6 md:p-10 flex flex-col md:flex-row items-center gap-10 shadow-sm">
+                  <div className="md:w-1/3">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-5 border border-black/5">
+                      <span className="w-2 h-2 rounded-full bg-paper-text"></span>
+                      <span className="text-[13px] font-medium text-paper-sub">Principle 1</span>
                     </div>
-                    <div className="bg-white p-4 border-l-2 border-black">
-                      <p className="text-[13px] font-medium">Workflow-embedded</p>
-                      <p className="text-[12px] text-paper-sub mt-1">Triggered at friction points</p>
+                    <h4 className="font-display text-[26px] font-bold text-paper-text mb-4">Context-aware generation</h4>
+                    <p className="text-[15px] text-paper-sub leading-relaxed">
+                      AI understands the structure of your document, including data sources and relationships, generating highly relevant insights and code specifically tailored to the current analytical state.
+                    </p>
+                  </div>
+                  <div className="md:w-2/3 w-full h-[320px] md:h-[420px] bg-paper-bg rounded-[16px] overflow-hidden border border-black/5 shadow-inner relative">
+                    <img src="/assets/images/section-4/Demo-1.gif" alt="Context-aware generation" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+
+                {/* Split Row for 2 and 3 */}
+                <div className="flex flex-col md:flex-row gap-6">
+                  {/* 2. Half-Width Card */}
+                  <div className="flex-1 bg-white rounded-[24px] border border-black/5 p-6 shadow-sm flex flex-col">
+                    <div className="w-full h-[260px] bg-paper-bg rounded-[16px] mb-8 overflow-hidden border border-black/5 shadow-inner">
+                      <img src="/assets/images/section-4/Demo-2.gif" alt="Dual entry points" className="w-full h-full object-cover" />
                     </div>
-                    <div className="bg-white p-4 border-l-2 border-black">
-                      <p className="text-[13px] font-medium">Transparent</p>
-                      <p className="text-[12px] text-paper-sub mt-1">Shows sources & reasoning</p>
+                    <div className="px-2">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-4 border border-black/5">
+                        <span className="w-2 h-2 rounded-full bg-paper-text"></span>
+                        <span className="text-[13px] font-medium text-paper-sub">Principle 2</span>
+                      </div>
+                      <h4 className="font-display text-[22px] font-bold text-paper-text mb-3">Dual entry points</h4>
+                      <p className="text-[15px] text-paper-sub leading-relaxed">
+                        Quick Add to generate new modules based on existing results, or In-module invoke to refine current content. Both show previews before acceptance.
+                      </p>
                     </div>
                   </div>
 
-                  {/* Arrow Connector */}
-                  <div className="hidden md:flex items-center justify-center mt-6">
-                    <div className="flex items-center gap-2 text-paper-sub">
-                      <span className="text-[11px] uppercase tracking-wider">Applied as</span>
-                      <svg width="24" height="12" viewBox="0 0 24 12" fill="none" className="text-paper-sub">
-                        <path d="M0 6H22M22 6L17 1M22 6L17 11" stroke="currentColor" strokeWidth="1.5" />
-                      </svg>
+                  {/* 3. Half-Width Card */}
+                  <div className="flex-1 bg-white rounded-[24px] border border-black/5 p-6 shadow-sm flex flex-col">
+                    <div className="w-full h-[260px] bg-paper-bg rounded-[16px] mb-8 overflow-hidden border border-black/5 shadow-inner">
+                      <img src="/assets/images/section-4/Demo-3.gif" alt="Transparent provenance" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="px-2">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-bg/50 rounded-full mb-4 border border-black/5">
+                        <span className="w-2 h-2 rounded-full bg-paper-text"></span>
+                        <span className="text-[13px] font-medium text-paper-sub">Principle 3</span>
+                      </div>
+                      <h4 className="font-display text-[22px] font-bold text-paper-text mb-3">Transparent provenance</h4>
+                      <p className="text-[15px] text-paper-sub leading-relaxed">
+                        Every AI-generated output explicitly displays its data source and reasoning path—building trust and enabling technical verification.
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Right: Mechanisms (Featured) */}
-                <div className="md:col-span-9">
-                  <Subheadline className="mb-4">Core Mechanisms</Subheadline>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Mechanism 1 */}
-                    <div className="border border-black/10 bg-white">
-                      <PlaceholderImage label="AI Commands by Module" aspect="aspect-[4/3]" />
-                      <div className="p-4">
-                        <p className="text-[13px] font-medium mb-1">Module-specific Commands</p>
-                        <p className="text-[12px] text-paper-sub">Code: generate, fix. Plot: analyze, Q&A.</p>
-                      </div>
-                    </div>
-
-                    {/* Mechanism 2 */}
-                    <div className="border border-black/10 bg-white">
-                      <PlaceholderImage label="Quick Add vs In-module" aspect="aspect-[4/3]" />
-                      <div className="p-4">
-                        <p className="text-[13px] font-medium mb-1">Dual Entry Points</p>
-                        <p className="text-[12px] text-paper-sub">Quick Add or in-module refine.</p>
-                      </div>
-                    </div>
-
-                    {/* Mechanism 3 */}
-                    <div className="border border-black/10 bg-white">
-                      <PlaceholderImage label="Provenance Display" aspect="aspect-[4/3]" />
-                      <div className="p-4">
-                        <p className="text-[13px] font-medium mb-1">Transparent Provenance</p>
-                        <p className="text-[12px] text-paper-sub">Shows data source & reasoning.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </FadeIn>
           </div>
@@ -402,45 +452,50 @@ const CaseStudy: React.FC = () => {
 
 
       {/* Section 5: Impact & Future Directions */}
-      <Section id="impact" className="bg-white border-t border-paper-text/10 py-12 md:py-16">
+      <Section id="impact" className="bg-white py-16 md:py-24">
         <Grid>
-          <div className="col-span-4 md:col-span-12 mb-10">
+          <div className="col-span-4 md:col-span-12 mb-12">
             <FadeIn>
               <Headline>Impact & Future Directions</Headline>
             </FadeIn>
           </div>
 
-          {/* Impact */}
-          <div className="col-span-4 md:col-span-6 mb-10">
+          {/* Left Column: Impact Narrative + Institutional Adoption */}
+          <div className="col-span-4 md:col-span-6 flex flex-col gap-10">
             <FadeIn delay={0.1}>
-              <Subheadline className="mb-4">Impact</Subheadline>
-              <Body className="mb-6">
-                Launched public beta December 2025. Since then, we've welcomed ODE Believers from institutions including:
-              </Body>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-2 bg-[#F5F5F3] text-[13px] font-medium">German Aerospace Center</span>
-                <span className="px-3 py-2 bg-[#F5F5F3] text-[13px] font-medium">Rensselaer Polytechnic Institute</span>
-                <span className="px-3 py-2 bg-[#F5F5F3] text-[13px] font-medium">Technical University of Munich</span>
-                <span className="px-3 py-2 bg-[#F5F5F3] text-[13px] font-medium">LTX Simulation GmbH</span>
+              <div>
+                <Subheadline className="mb-5">Real-World Impact</Subheadline>
+                <div className="text-[16px] mb-8 leading-relaxed text-paper-sub space-y-4">
+                  <p>
+                    Launched in public beta in December 2025, Paper quickly proved its value. By accelerating the transition from raw analytical data to cohesive, readable reports, we've welcomed early adopters and "ODE Believers" from leading research institutions spanning the globe.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">German Aerospace Center</span>
+                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">Rensselaer Polytechnic</span>
+                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">Technical University of Munich</span>
+                  <span className="px-4 py-2 bg-paper-bg border border-black/5 text-[13px] font-medium rounded-full text-paper-text">LTX Simulation GmbH</span>
+                </div>
               </div>
             </FadeIn>
           </div>
 
-          {/* Next Step */}
-          <div className="col-span-4 md:col-span-6 mb-10">
-            <FadeIn delay={0.2}>
-              <Subheadline className="mb-4">Next Step</Subheadline>
-              <Body>
-                <strong>Viewer-side AI:</strong> enabling readers to ask questions and explore results interactively.
-              </Body>
-            </FadeIn>
-          </div>
+          {/* Right Column: Next Steps & Closing */}
+          <div className="col-span-4 md:col-span-5 md:col-start-8">
+            <FadeIn delay={0.2} className="h-full flex flex-col justify-between">
+              <div className="mb-12">
+                <Subheadline className="mb-5">Next Step</Subheadline>
+                <div className="p-8 bg-paper-bg rounded-2xl border border-black/5 shadow-sm">
+                  <p className="text-[15px] leading-relaxed text-paper-text">
+                    <strong>Viewer-side AI integration:</strong> enabling readers to dynamically ask questions, manipulate parameters, and explore analytical results interactively directly from the published document.
+                  </p>
+                </div>
+              </div>
 
-          {/* Closing Statement */}
-          <div className="col-span-4 md:col-span-12">
-            <FadeIn delay={0.3}>
-              <div className="border-t border-black/10 pt-10 mt-6">
-                <p className="text-2xl md:text-3xl font-serif italic text-paper-text/80 max-w-3xl">
+              {/* Closing Statement */}
+              <div className="border-l-4 border-black/10 pl-6 py-2 mt-auto">
+                <p className="text-xl md:text-[24px] font-serif italic text-paper-text/80 leading-snug">
                   "The goal isn't smarter AI—it's clearer workflows where human insight and machine speed work in tandem."
                 </p>
               </div>
@@ -451,16 +506,32 @@ const CaseStudy: React.FC = () => {
 
 
       {/* Footer */}
-      <footer className="py-24 px-6 md:px-12 border-t border-black bg-paper-bg">
-        <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div>
-            <Label className="mb-2">Designed by</Label>
-            <p className="text-xl font-medium">Ruini Oh</p>
+      <footer className="w-full bg-paper-bg pb-12 pt-24 px-6 md:px-12">
+        <div className="max-w-screen-2xl mx-auto border-t border-black/10 pt-16">
+          {/* Top Row */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24 md:mb-32">
+            <a href="mailto:ruiniohhh@gmail.com" className="font-display text-4xl md:text-5xl tracking-tight text-paper-text hover:opacity-70 transition-opacity mb-8 md:mb-0">
+              ruiniohhh@gmail.com
+            </a>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center justify-center border border-black/10 rounded-full p-1 hover:bg-black/5 transition-colors group cursor-pointer"
+            >
+              <div className="bg-paper-bg rounded-full px-6 py-2 group-hover:bg-transparent transition-colors">
+                <span className="text-2xl text-paper-text font-sans">↑</span>
+              </div>
+            </button>
           </div>
-          <div className="mt-8 md:mt-0 flex gap-8">
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-paper-sub">Twitter</a>
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-paper-sub">LinkedIn</a>
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-paper-sub">Email</a>
+
+          {/* Bottom Row */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-[13px] font-sans">
+            <p className="text-paper-sub mb-6 md:mb-0">© ruini oh | made in 2025</p>
+            <div className="flex gap-8">
+              <a href="https://www.behance.net/rannieoh" target="_blank" rel="noopener noreferrer" className="text-paper-sub hover:text-paper-text transition-colors">Behance</a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-paper-sub hover:text-paper-text transition-colors">Instagram</a>
+              <a href="https://ruiniohh.webflow.io/" target="_blank" rel="noopener noreferrer" className="text-paper-sub hover:text-paper-text transition-colors">Portfolio</a>
+              <a href="https://www.linkedin.com/in/rannie-ou/" target="_blank" rel="noopener noreferrer" className="text-paper-sub hover:text-paper-text transition-colors">LinkedIn</a>
+            </div>
           </div>
         </div>
       </footer>
