@@ -28,8 +28,14 @@ const CaseStudy: React.FC = () => {
             {/* Title */}
             <div className="flex flex-col gap-4 md:gap-[16px] md:w-[380px] shrink-0">
               <div className="flex flex-col">
-                <h1 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
-                  ODE-Paper
+                <h1 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal group">
+                  <a href="https://www.orthogonal.dev/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 relative transition-all duration-300 hover:text-black">
+                    ODE-Paper
+                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                      <path d="M7 17l10-10M7 7h10v10"></path>
+                    </svg>
+                  </a>
                 </h1>
               </div>
               <div className="flex flex-col">
@@ -66,7 +72,9 @@ const CaseStudy: React.FC = () => {
                 </div>
                 <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Status</span>
-                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">In Beta</span>
+                  <a href="https://www.orthogonal.dev/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-2 py-0.5 bg-black text-white rounded text-[10px] uppercase tracking-wider font-bold hover:bg-black/80 transition-colors w-fit">
+                    In Beta
+                  </a>
                 </div>
               </div>
 
@@ -80,7 +88,7 @@ const CaseStudy: React.FC = () => {
 
 
       {/* Section 1: Pain Points */}
-      <div id="insights" className="w-full flex justify-center bg-white">
+      <div id="background" className="w-full flex justify-center bg-white">
         <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
 
           {/* Section Heading */}
@@ -99,9 +107,9 @@ const CaseStudy: React.FC = () => {
             <div className="flex flex-col gap-8 md:gap-[98px] md:w-[275px] shrink-0">
               {/* Phase 1 */}
               <div className="flex flex-col gap-4 md:gap-[16px]">
-                <div className="bg-[#EA7B48]/10 text-[#EA7B48] px-4 py-[6px] rounded-[8px] max-w-fit font-sans text-base md:text-[18px] font-medium leading-[1.5]">
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">
                   Authoring
-                </div>
+                </h4>
                 <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
                   The authoring process is fragmented across disconnected environments.
                 </p>
@@ -109,9 +117,9 @@ const CaseStudy: React.FC = () => {
 
               {/* Phase 2 */}
               <div className="flex flex-col gap-4 md:gap-[16px]">
-                <div className="bg-[#2172AB]/10 text-[#2172AB] px-4 py-[6px] rounded-[8px] max-w-fit font-sans text-base md:text-[18px] font-medium leading-[1.5]">
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">
                   Delivery
-                </div>
+                </h4>
                 <p className="font-sans text-base md:text-[16px] font-medium leading-relaxed md:leading-[1.6] tracking-tight md:tracking-[-0.18px] text-paper-sub">
                   When engineering papers can't be run, verified, or interacted with, they become black boxes.
                 </p>
@@ -140,19 +148,23 @@ const CaseStudy: React.FC = () => {
       <div id="definition" className="w-full flex justify-center bg-white">
         <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
 
-          {/* Section Heading */}
-          <div className="flex flex-col gap-3 md:gap-[12px] w-full">
-            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
-              Product defining
-            </h2>
-            <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-sub md:w-[455px]">
-              To define the product scope and clarify core requirements, I organized a workshop with the team using physical cards to simulate real user workflows.
-            </p>
-          </div>
+          <div className="w-full flex flex-col md:flex-row gap-12 items-center">
+            {/* Split Left: Text */}
+            <div className="flex-1 flex flex-col gap-6">
+              <div className="flex flex-col gap-3 md:gap-[12px]">
+                <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
+                  Product defining
+                </h2>
+                <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-sub">
+                  To define the product scope and clarify core requirements, I organized a workshop with the team using physical cards to simulate real user workflows.
+                </p>
+              </div>
+            </div>
 
-          {/* Media */}
-          <div className="w-full rounded-2xl md:rounded-[16px] h-[300px] md:h-[520px] overflow-hidden">
-            <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session" className="w-full h-full object-cover" />
+            {/* Split Right: Media */}
+            <div className="flex-1 rounded-2xl md:rounded-[16px] h-[300px] md:h-[400px] overflow-hidden shadow-2xl shadow-black/5">
+              <img src="/assets/images/section-2/workshop.jpg" alt="Workshop Session" className="w-full h-full object-cover" />
+            </div>
           </div>
 
           {/* Core Insights */}
@@ -183,19 +195,19 @@ const CaseStudy: React.FC = () => {
 
 
       {/* Section 3: Interaction Design */}
-      <div id="modules" className="w-full flex justify-center bg-white">
+      <div id="highlights" className="w-full flex justify-center bg-white">
         <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
           {/* Heading */}
-          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full">
             <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
               Highlights
             </h2>
           </div>
 
           {/* Grid setup */}
-          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[24px] pt-4 md:pt-[16px]">
+          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[24px]">
             {/* Card 1 */}
-            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+            <div className="flex-1 flex flex-col bg-[#FAFAFA] rounded-2xl md:rounded-[16px] overflow-hidden border border-black/[0.03]">
               <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
                 {/* Icon */}
                 <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
@@ -212,15 +224,15 @@ const CaseStudy: React.FC = () => {
                   All modules share consistent behaviors for fast editing and connect through parent-child binding for data traceability.
                 </p>
               </div>
-              <div className="p-2 md:p-[8px] pt-0">
-                <div className="w-full h-auto md:h-[295.5px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+              <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
+                <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
                   <img src="/assets/images/section-3/Feature-general.png" alt="General Behaviors" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+            <div className="flex-1 flex flex-col bg-[#FAFAFA] rounded-2xl md:rounded-[16px] overflow-hidden border border-black/[0.03]">
               <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
                 {/* Icon */}
                 <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
@@ -236,15 +248,15 @@ const CaseStudy: React.FC = () => {
                   Run simulations and analysis in-notebook. Switch between text and visual views for clearer model understanding.
                 </p>
               </div>
-              <div className="p-2 md:p-[8px] pt-0">
-                <div className="w-full h-auto md:h-[264px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+              <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
+                <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
                   <img src="/assets/images/section-3/Feature-code.png" alt="Code Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="flex-1 flex flex-col flex-nowrap gap-4 md:gap-[10px] bg-[#FAFAFA] rounded-2xl md:rounded-[16px]">
+            <div className="flex-1 flex flex-col bg-[#FAFAFA] rounded-2xl md:rounded-[16px] overflow-hidden border border-black/[0.03]">
               <div className="flex flex-col gap-3 md:gap-[12px] p-6 md:p-[24px]">
                 {/* Icon */}
                 <div className="w-12 h-12 bg-[#F2F2F580] rounded-[12px] flex items-center justify-center">
@@ -259,16 +271,15 @@ const CaseStudy: React.FC = () => {
                   Visualization Modules
                 </h4>
                 <p className="font-sans text-sm md:text-[14.5px] font-medium leading-relaxed md:leading-[1.448] text-paper-sub">
-                  Inspect and validate results in Table. Explore patterns and comparisons in Plot. Switch views while keeping the same data source connected.
+                  Inspect and validate results in Table. Explore patterns and comparisons in Plot. Switch views while keeping same source.
                 </p>
               </div>
-              <div className="p-2 md:p-[8px] pt-0">
-                <div className="w-full h-auto md:h-[264px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
+              <div className="px-2 pb-2 md:px-[8px] md:pb-[8px] mt-auto">
+                <div className="w-full h-[300px] bg-white rounded-lg md:rounded-[8px] overflow-hidden">
                   <img src="/assets/images/section-3/Feature-visualization.png" alt="Visualization Modules" className="w-full h-full object-contain p-2" />
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -278,22 +289,27 @@ const CaseStudy: React.FC = () => {
       <div id="ai" className="w-full flex justify-center bg-white border-t border-black/5">
         <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
 
-          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
-            <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
-              What's AI's role in Paper?
-            </h2>
-          </div>
+          {/* AI Definition Callout - Redesigned with Logo Symbols */}
+          <div className="w-full bg-[#FAFAFA] rounded-3xl md:rounded-[40px] p-8 md:p-[80px] flex flex-col items-center text-center relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#EA7B48]/10 to-transparent rounded-full -mr-32 -mt-32 transition-transform duration-700 group-hover:scale-110"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-[#2172AB]/5 to-transparent rounded-full -ml-24 -mb-24 transition-transform duration-700 group-hover:scale-110"></div>
 
-          {/* AI Definition Callout */}
-          <div className="w-full bg-[#FAFAFA] rounded-2xl md:rounded-[24px] p-8 md:p-[64px] flex flex-col md:flex-row gap-8 md:gap-[48px] justify-between items-start">
-            <div>
-              <svg width="64" height="64" viewBox="0 0 141 141" fill="none" className="text-[#EA7B48]">
-                <path d="M23.381 12.814l1.32-0.91c5.1-3.521 5.778-4.003 6.455-4.482l3.366 4.762c-0.706 0.5-1.41 0.997-6.51 4.518l-2.209 1.523 9.397 5.707-3.025 4.984-8.794-5.34 0 12.012-5.83 0 0-11.663c-4.23 2.919-9.045 6.242-13.942 9.628l-3.315-4.795c5.228-3.616 10.364-7.16 14.792-10.216l-15.086-9.161 1.513-2.492 1.514-2.491 14.523 8.817 0-13.215 5.831 0 0 12.814z" fill="currentColor" />
-              </svg>
+            <div className="mb-12 md:mb-16 relative w-64 h-32 md:w-72 md:h-36 flex items-center justify-center">
+              {/* Paper Branding Logo - Left Card (Bottom) */}
+              <div className="absolute left-0 bottom-0 w-24 h-24 md:w-28 md:h-28 bg-white shadow-xl shadow-black/5 rounded-[24px] flex items-center justify-center z-10 transition-all duration-500 hover:-translate-y-2 hover:z-30">
+                <img src="/assets/images/logos/Paper.svg" alt="Paper Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+              </div>
+
+              {/* ODE-AI Logo - Right Card (Top, Overlapping) */}
+              <div className="absolute right-0 top-0 w-24 h-24 md:w-28 md:h-28 bg-white shadow-2xl shadow-black/10 rounded-[24px] flex items-center justify-center z-20 transition-all duration-500 hover:-translate-y-2 hover:z-30 border border-black/[0.03]">
+                <img src="/assets/images/logos/ODE-AI.svg" alt="ODE AI Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+              </div>
             </div>
-            <p className="font-display text-4xl md:text-[52px] font-normal leading-tight md:leading-[1.5] tracking-tight md:tracking-[-0.18px] text-paper-text md:w-[825px]">
-              AI shouldn't be a general chatbot — it should be a collaborator embedded in the workflow.
-            </p>
+
+            <h2 className="font-display text-3xl md:text-[56px] font-normal leading-tight md:leading-[1.2] tracking-tight md:tracking-[-0.03em] text-paper-text max-w-[980px] relative z-10">
+              <span className="text-paper-sub opacity-40">AI shouldn't be a general chatbot — </span>
+              it should be a <span className="text-black font-medium relative">collaborator<span className="absolute bottom-1 left-0 w-full h-3 bg-[#EA7B48]/10 -z-10"></span></span> embedded in the workflow.
+            </h2>
           </div>
 
           {/* Mechanisms */}
@@ -305,7 +321,7 @@ const CaseStudy: React.FC = () => {
                 <img src="/assets/images/section-4/Demo-1.gif" alt="Context-aware generation" className="w-full h-auto rounded-lg" />
               </div>
               <div className="md:w-[400px] flex flex-col gap-4">
-                <h4 className="font-display text-2xl md:text-[28px] font-bold text-paper-text">AI Integration in Outline</h4>
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">AI Integration in Outline</h4>
                 <p className="font-sans text-base leading-relaxed text-paper-sub">
                   Trigger AI from the Outline while browsing. Call out a specific module and run targeted "Suggest" commands in context.
                 </p>
@@ -313,13 +329,13 @@ const CaseStudy: React.FC = () => {
             </div>
 
             {/* Mech Row (2 and 3) */}
-            <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[48px]">
+            <div className="w-full flex flex-col md:flex-row gap-8 md:gap-[24px]">
               {/* Mech 2 */}
               <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
-                <div className="w-full h-[260px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
+                <div className="w-full h-[300px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
                   <img src="/assets/images/section-4/Demo-2.gif" alt="AI Assistance in Code Module" className="w-full h-full object-cover" />
                 </div>
-                <h4 className="font-display text-2xl md:text-[24px] font-bold text-paper-text">AI Assistance in Code Module</h4>
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">AI Assistance in Code Module</h4>
                 <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
                   Generate runnable code directly inside Code modules. Also supports quick edits like fixing errors and refactoring.
                 </p>
@@ -327,10 +343,10 @@ const CaseStudy: React.FC = () => {
 
               {/* Mech 3 */}
               <div className="flex-1 bg-[#FAFAFA] border border-black/5 rounded-2xl md:rounded-[24px] p-6 md:p-[24px] flex flex-col gap-6">
-                <div className="w-full h-[260px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
+                <div className="w-full h-[300px] bg-white rounded-xl md:rounded-[16px] overflow-hidden">
                   <img src="/assets/images/section-4/Demo-3.gif" alt="Quick Add Modules for Next Step" className="w-full h-full object-cover" />
                 </div>
-                <h4 className="font-display text-2xl md:text-[24px] font-bold text-paper-text">Quick Add Modules for Next Step</h4>
+                <h4 className="font-display text-lg md:text-[18px] font-semibold md:font-[600] leading-snug md:leading-[1.389] text-paper-text">Quick Add Modules for Next Step</h4>
                 <p className="font-sans text-base leading-relaxed md:leading-[1.6] text-paper-sub">
                   From a current result, ask a question and instantly add the next module to continue the analysis.
                 </p>
@@ -346,7 +362,7 @@ const CaseStudy: React.FC = () => {
         <div className="w-full max-w-[1440px] flex flex-col gap-12 md:gap-[48px] p-6 lg:p-[80px]">
 
           {/* Heading */}
-          <div className="flex flex-col gap-3 md:gap-[12px] w-full px-[80px]">
+          <div className="flex flex-col gap-3 md:gap-[12px] w-full">
             <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
               Impact & future directions
             </h2>
@@ -383,22 +399,21 @@ const CaseStudy: React.FC = () => {
                   Viewer-side AI: enabling readers to ask questions and explore results interactively — turning static consumption into active investigation.
                 </p>
               </div>
+
+              {/* Closing Quote - Refined with Serif Aesthetics */}
+              <div className="border-t border-black/10 pt-12 mt-4 space-y-4">
+                <p className="font-serif text-xl md:text-[28px] font-medium italic text-paper-text/90 leading-relaxed relative pl-6 border-l-2 border-black">
+                  "The goal isn't smarter AI — it's clearer workflows where human insight and machine speed work in tandem."
+                </p>
+              </div>
             </div>
-
-          </div>
-
-          {/* Closing Card */}
-          <div className="w-full border-t border-[#CCCCCC] pt-8 mt-8">
-            <p className="font-display text-3xl md:text-[36px] font-medium italic text-paper-text text-left">
-              "The goal isn't smarter AI — it's clearer workflows where human insight and machine speed work in tandem."
-            </p>
           </div>
 
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="w-full bg-paper-bg pb-12 pt-24 px-6 md:px-12">
+      <footer className="w-full bg-paper-bg pb-12 pt-12 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto border-t border-black/10 pt-16">
           {/* Top Row */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24 md:mb-32">

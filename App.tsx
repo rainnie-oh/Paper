@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 import CaseStudy from './components/CaseStudy';
 
 const NAV_ITEMS = [
-  { id: 'hero', label: 'Overview' },
-  { id: 'insights', label: 'Insights' },
+  { id: 'background', label: 'Background' },
   { id: 'definition', label: 'Definition' },
-  { id: 'system', label: 'System' },
-  { id: 'ai-design', label: 'AI Design' },
+  { id: 'highlights', label: 'Highlights' },
+  { id: 'ai', label: 'AI', hasIcon: true },
   { id: 'impact', label: 'Impact' },
 ];
 
@@ -43,7 +42,7 @@ const App: React.FC = () => {
     <div className="min-h-screen w-full relative">
       {/* Navigation Bar - Sticky */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-bg/90 backdrop-blur-lg">
-        <div className="max-w-screen-2xl mx-auto px-8 md:px-20 lg:px-32">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-[80px]">
           <div className="flex items-center justify-between py-4">
             {/* Back Button */}
             <a
@@ -63,11 +62,16 @@ const App: React.FC = () => {
                 <li key={item.id} className="relative">
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className={`text-[11px] md:text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 px-4 py-1.5 rounded-full relative ${activeSection === item.id
+                    className={`text-[11px] md:text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 px-4 py-1.5 rounded-full relative flex items-center gap-1.5 ${activeSection === item.id
                       ? 'bg-black text-white z-20'
                       : 'text-paper-sub hover:text-black hover:bg-black/5 z-10'
                       }`}
                   >
+                    {item.hasIcon && (
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                      </svg>
+                    )}
                     {item.label}
                   </button>
                 </li>
