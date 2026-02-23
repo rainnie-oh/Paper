@@ -1,0 +1,110 @@
+# Paper – Interactive Analysis Notebook for Engineers
+
+## Hero Section
+
+**Title:** Paper—AI Interactive Analysis Notebook for Engineers  
+
+**One-liner:** Built 0-1 modular system unifying code, parameters, and visualization into dynamic documents  
+
+**Key Info:**
+
+- Timeline: 2024.05-2024.12
+- Sole product designer | Full 0-1 process
+- Public beta launched Dec 2025
+- Tools: Figma（Make&Design）, Google AI Studio
+
+---
+
+## Section 1: User Pain Points & Insights
+
+**Phase 1: Authoring**  →  **Phase 2: Delivery**  
+
+Engineers constantly jump between tools—MATLAB for analysis, Overleaf for writing, manually copy-pasting results  |  When engineering papers can't be run, verified, or interacted with, they become black boxes  
+
+**Paper's Solution:**  
+
+Unified environment where **writing = analysis = presentation**. What's delivered isn't a static report, but an explorable, reproducible interactive document.
+
+---
+
+## Section 2: Module-Product foundation
+
+**Challenge + Workshop**
+
+To define the product scope and clarify core requirements, I organized a workshop with the team using physical cards to simulate real user workflows.
+
+**Core Insights**
+
+**1. Users need to reference data from multiple sources**
+
+Engineers pull data from different places—models from ODE+ simulation apps, code, external table files—and combine them into analysis workflows.
+
+**2. Modules need clear roles and relationships**
+
+Different modules serve different purposes (Code executes, Chart/Table visualizes, Text displays) and can form relationships.
+
+**Design decision**
+
+A modular system where Code, Text, Table, Plot can be assembled like building blocks, with parent-child binding for traceability and automatic updates.
+
+## Section 3: Interaction & Component Design
+
+**General Module Capabilities**  
+
+All modules share unified behaviors: drag to reposition, resize, slash-command insertion.  
+
+Parent-child relationships:Modules bind to data sources for data traceability and automatic updates.
+
+**Code Module**  
+
+Dual-view switching (code ⇄ diagram) + upstream data binding capability.
+
+**Visualization Modules**  
+
+Table and Plot can switch views within the same module while preserving data source.
+
+---
+
+## Section 4: AI + Module-based
+
+**Paper's Opportunity**  
+
+With modular structure and parent-child relationships in place, AI can understand complete workflows.This enables AI to accelerate analysis.  
+
+Definition for Paper AI: **AI shouldn't be a general chatbot** but a **collaborator embedded in the workflow**.
+
+**Design Principles**
+
+1. **Context-aware**: AI understands module types, data sources, and relationships
+2. **Workflow-embedded**: Triggered at natural friction points—error states, empty modules, result exploration
+3. **Transparent**: Shows data sources and reasoning for every generation
+
+**Core Mechanisms**
+
+**Mechanism 1: Module-specific AI commands**  
+
+Code modules: generate, fix errors, refactor. Table/Plot modules: analyze data, create visualizations, natural language Q&A. AI provides relevant commands based on module type.
+
+**Mechanism 2: Dual entry points**  
+
+Quick Add: Generate new modules based on existing results. In-module invoke: Refine current module content. Both show preview before acceptance.
+
+**Mechanism 3: Transparent provenance**  
+
+Every AI-generated output displays its data source and reasoning path—building trust and enabling verification.
+
+---
+
+## Section 5: Impact & Future Directions
+
+**Impact**  
+
+Launched public beta December 2025. Since then, we've welcomed ODE Believers from institutions including German Aerospace Center, Rensselaer Polytechnic Institute, Technical University of Munich, and LTX Simulation GmbH.
+
+**Next Step**  
+
+Viewer-side AI: enabling readers to ask questions and explore results interactively.
+
+**Closing Statement**  
+
+The goal isn't smarter AI—it's clearer workflows where human insight and machine speed work in tandem.
