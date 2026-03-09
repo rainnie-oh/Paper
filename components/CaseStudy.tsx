@@ -59,14 +59,14 @@ const CaseStudy: React.FC = () => {
               <div className="hidden md:block w-full h-[1px] bg-black/[0.05]"></div>
 
               {/* Meta Row */}
-              <div className="w-full grid grid-cols-2 md:flex justify-between gap-6 md:gap-4">
+              <div className="w-full grid grid-cols-2 md:flex flex-wrap justify-between gap-6 md:gap-4">
                 <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Timeline</span>
                   <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">2025.05–2025.12</span>
                 </div>
-                <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
+                <div className="flex flex-col gap-1 w-full md:max-w-[220px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Tools</span>
-                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">Figma, AI Studio</span>
+                  <span className="font-sans text-sm md:text-[14px] font-medium text-paper-text leading-[1.5]">AI (Fig Make, AI studio), Figma</span>
                 </div>
                 <div className="flex flex-col gap-1 w-full md:max-w-[120px]">
                   <span className="font-sans text-xs md:text-[12px] text-paper-sub leading-[1.5] font-normal">Role</span>
@@ -202,7 +202,7 @@ const CaseStudy: React.FC = () => {
           {/* Heading */}
           <div className="flex flex-col gap-3 md:gap-[12px] w-full">
             <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
-              Highlights
+              Designing a modular system as the foundation
             </h2>
           </div>
 
@@ -368,9 +368,6 @@ const CaseStudy: React.FC = () => {
             <h2 className="font-display text-4xl md:text-[52px] leading-tight md:leading-[1.077] tracking-tight md:tracking-[-0.8px] text-paper-text font-normal">
               Impact & future directions
             </h2>
-            <p className="font-sans text-base md:text-[18px] font-medium leading-relaxed md:leading-[1.5] text-paper-sub">
-              Launched public beta December 2025.
-            </p>
           </div>
 
           {/* Impact Split */}
@@ -381,7 +378,7 @@ const CaseStudy: React.FC = () => {
               <div>
                 <h4 className="font-sans text-sm md:text-[14px] font-bold text-paper-text uppercase tracking-wider mb-2">Impact</h4>
                 <p className="font-sans text-base md:text-[16px] leading-relaxed text-paper-sub">
-                  Launched public beta December 2025. Since then, we've welcomed ODE Believers from institutions including:
+                  Since then, we've welcomed ODE Believers from institutions including:
                 </p>
               </div>
               {/* Institution Pills */}
